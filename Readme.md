@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Тимур Белалов](https://up.htmlacademy.ru/adaptive/26/user/2057907).
-* Наставник: `Неизвестно`.
+- Студент: [Тимур Белалов](https://up.htmlacademy.ru/adaptive/26/user/2057907).
+- Наставник: `Alex Elkin`(https://htmlacademy.ru/profile/alex_elkin).
 
 ---
 
