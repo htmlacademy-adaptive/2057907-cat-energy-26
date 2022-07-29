@@ -9,9 +9,6 @@
 <body class="page__body">
   <header class="main-header">
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
       <div class="main-nav__wrapper">
         <div class="main-nav__list logo-list">
           <a class="logo-list__link" href="index.html">
@@ -38,6 +35,9 @@
             </a>
           </li>
         </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </div>
     </nav>
   </header>
@@ -159,9 +159,11 @@
         <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="cooperation__description">Ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         <div class="cooperation__map-wrapper">
-          <iframe class="cooperation__map"
+          <iframe class="cooperation__main-map"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A95450451a50e191e02d00f00296c7e42715b26db23d44613b3393d2eed27c4d6&amp;source=constructor"
             width="320" height="362"></iframe>
+          <img class="cooperation__map" src="img/content/Map.png" width="320" height="362"
+            alt="Карта с местоположением компании">
         </div>
       </section>
       <div class="main-footer__logo footer-logo">
