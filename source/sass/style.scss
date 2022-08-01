@@ -1,6 +1,10 @@
+// global vars
+@use "blocks/my-vars";
+
 // global styles:
 @use "global";
 @use "fonts";
+
 
 // style for BEM blocks:
 @use "blocks/advantages.scss";
@@ -27,6 +31,7 @@
 @use "blocks/site-list.scss";
 @use "blocks/social.scss";
 @use "blocks/stats.scss";
+
 
 
 
