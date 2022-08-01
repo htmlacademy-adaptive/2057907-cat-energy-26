@@ -1,0 +1,19 @@
+@use "my-vars" as *;
+
+.card-product__link {
+  text-decoration: none;
+}
+
+.card-product__title {
+  font-weight: inherit;
+  color: $raisin-black;
+  text-transform: uppercase;
+}
+
+.card-product__specification,
+.card-product__value {
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-gray;
+}

@@ -1,7 +1,30 @@
+@use "my-vars" as *;
+
 .advantages {
-  
+  font-family: $oswald;
+  min-width: 280px;
 }
 
 .advantages__item {
-  background-color: #F2F2F2;
+  background-color: $gray;
+}
+
+.advantages__title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.advantages__slogan {
+  font-family: $arial;
+  color: $dark-gray;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.advantages__link {
+  text-decoration: none;
+  color: $black;
+  text-transform: uppercase;
 }

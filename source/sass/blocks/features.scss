@@ -1,0 +1,13 @@
+@use "my-vars" as *;
+
+.features {
+  font-family: $arial;
+  line-height: 18px;
+}
+
+.features__title {
+  font-family: $oswald;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}

@@ -1,3 +1,34 @@
+@use "my-vars" as *;
+
 .stats {
+  font-family: $oswald;
+  line-height: 20px;
   background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 0%, rgba(234,234,234,1) 100%);
 }
+
+.stats__title {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.stats__description {
+  font-family: $arial;
+  line-height: 18px;
+  color: $dark-gray;
+  &--font-size-s {
+    font-size: 12px;
+    line-height: 12px;
+    text-transform: lowercase;
+  }
+}
+
+.stats__number {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.stats__item {
+  text-transform: uppercase;
+}
+

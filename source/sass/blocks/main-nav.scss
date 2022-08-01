@@ -1,7 +1,10 @@
+@use "my-vars" as *;
+
 .main-nav {
-  font-family: "Oswald", "Tahoma", sans-serif;
+  font-family: $oswald;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   color: #000000;
+  text-transform: uppercase;
 }

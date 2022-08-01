@@ -1,3 +1,7 @@
+@use "my-vars" as *;
+
 .main-footer {
-  background-color: #F2F2F2;
+  font-family: $arial;
+  line-height: 20px;
+  background-color: $gray;
 }
