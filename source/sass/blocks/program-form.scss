@@ -3,6 +3,8 @@
 .program-form__text {
   color: $dark-gray;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 13px;
 }
 
 .program-form__field {
@@ -15,15 +17,19 @@
 
 .program-form__control-label {
   text-transform: uppercase;
-}
-
-.program-form__control-label--font-color {
-  color: $raisin-black;
+  display: inline-block;
+  margin-left: 16px;
+  margin-bottom: 13px;
+    &--font-color {
+      color: $raisin-black;
+  }
 }
 
 .program-form__subtitle {
   font-size: 24px;
   line-height: 26px;
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .program-form__comment-field {
@@ -32,10 +38,29 @@
   line-height: 18px;
   color: $dark-gray;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .program-form__legend {
   font-family: $arial;
   font-size: 14px;
   line-height: 16px;
+  display: block;
+}
+
+.program-form__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.program-form__control-group {
+  margin-bottom: 45px;
+    &:last-child {
+      margin-bottom: 34px;
+    }
+}
+
+.program-form__button {
+  margin-bottom: 21px;
 }

@@ -1,4 +1,15 @@
+@use "my-vars" as *;
+
+.site-list {
+  padding: 22px 0 24px 0;
+}
+
+.site-list__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .site-list__link {
   text-decoration: none;
-  color: #000000;
+  color: inherit;
 }
+

@@ -1,5 +1,10 @@
 @use "my-vars" as *;
 
+
+.card-product {
+  padding-bottom: 25px;
+}
+
 .card-product__link {
   text-decoration: none;
 }
@@ -8,6 +13,22 @@
   font-weight: inherit;
   color: $raisin-black;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.card-product__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+}
+
+.card-product__item {
+  padding: 11px 0 14px 0;
+  margin-bottom: 19px;
 }
 
 .card-product__specification,
@@ -16,4 +37,8 @@
   font-size: 12px;
   line-height: 16px;
   color: $dark-gray;
+}
+
+.card-product__value {
+  margin: 0;
 }

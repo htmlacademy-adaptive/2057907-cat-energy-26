@@ -1,0 +1,20 @@
+@use "my-vars" as *;
+
+.footer-contacts {
+  padding: 39px 20px 22px 20px;
+}
+
+.footer-contacts__logo-link {
+  display: block;
+  margin-bottom: 52px;
+}
+
+.footer-contacts__copyright-link {
+  text-decoration: none;
+}
+
+.footer-contacts__copyright-title {
+  font-size: 16px;
+  line-height: 18px;
+  color: $dark-gray;
+}

@@ -3,10 +3,21 @@
 .advantages {
   font-family: $oswald;
   min-width: 280px;
+  padding: 0 20px 20px 20px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .advantages__item {
   background-color: $gray;
+  padding: 20px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+  }
 }
 
 .advantages__title {
@@ -14,6 +25,8 @@
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 .advantages__slogan {
@@ -21,6 +34,8 @@
   color: $dark-gray;
   font-size: 16px;
   line-height: 16px;
+  margin: 0;
+  margin-bottom: 38px;
 }
 
 .advantages__link {

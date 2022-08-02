@@ -1,6 +1,7 @@
 @use "my-vars" as *;
 
 .cooperation {
+  padding: 26px 20px 26px 20px;
  &--bg-color {
   background-color: $white;
  }
@@ -12,10 +13,13 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $chinese-black;
+  margin: 0;
+  margin-right: 2px;
 }
 
 .cooperation__address-text {
   font-size: 14px;
   font-style: normal;
   color: $dark-gray;
+  margin: 0;
 }

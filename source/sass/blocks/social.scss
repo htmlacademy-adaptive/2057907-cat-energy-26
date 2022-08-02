@@ -1,0 +1,12 @@
+@use "my-vars" as *;
+
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 43px;
+}
+
+.social__link {
+  text-decoration: none;;
+}
