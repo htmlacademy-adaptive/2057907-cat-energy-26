@@ -21,9 +21,10 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-    &:not(:last-child) {
-      margin-bottom: 22px;
-    }
+
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
 }
 
 .card-product__item {

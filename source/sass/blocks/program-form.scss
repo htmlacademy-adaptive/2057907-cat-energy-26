@@ -20,8 +20,9 @@
   display: inline-block;
   margin-left: 16px;
   margin-bottom: 13px;
-    &--font-color {
-      color: $raisin-black;
+
+  &--font-color {
+    color: $raisin-black;
   }
 }
 
@@ -56,9 +57,10 @@
 
 .program-form__control-group {
   margin-bottom: 45px;
-    &:last-child {
-      margin-bottom: 34px;
-    }
+
+  &:last-child {
+    margin-bottom: 34px;
+  }
 }
 
 .program-form__button {

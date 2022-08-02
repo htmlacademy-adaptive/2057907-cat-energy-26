@@ -3,7 +3,7 @@
 .stats {
   font-family: $oswald;
   line-height: 20px;
-  background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 0%, rgba(234,234,234,1) 100%);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 1) 100%);
   padding: 25px 20px 40px 20px;
 }
 
@@ -21,6 +21,7 @@
   color: $dark-gray;
   margin: 0;
   margin-bottom: 20px;
+
   &--font-size-s {
     font-size: 12px;
     line-height: 12px;
@@ -43,8 +44,9 @@
 .stats__item {
   text-transform: uppercase;
   padding-top: 15px;
-    &:last-child {
-      padding-top: 20px;
+
+  &:last-child {
+    padding-top: 20px;
   }
 }
 

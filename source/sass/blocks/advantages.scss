@@ -15,8 +15,9 @@
 .advantages__item {
   background-color: $gray;
   padding: 20px;
-    &:not(:last-child) {
-      margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
