@@ -1,0 +1,30 @@
+@use "my-vars" as *;
+
+.features {
+  font-family: $arial;
+  line-height: 18px;
+  padding: 0 20px 49px 20px;
+}
+
+.features__title {
+  font-family: $oswald;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.features__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.features__description {
+  margin: 0;
+}

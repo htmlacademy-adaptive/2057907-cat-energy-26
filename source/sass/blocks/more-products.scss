@@ -1,0 +1,29 @@
+@use "my-vars" as *;
+
+.more-products {
+  padding: 0;
+  padding-top: 3px;
+  margin: 0;
+}
+
+.more-products__subtitle {
+  color: $chinese-black;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 8px;
+  padding-top: 53px;
+}
+
+.more-products__description {
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 16px;
+  color: $dark-gray;
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.more-products__button {
+  background-color: $gray;
+  color: $dark-gray;
+}

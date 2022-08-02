@@ -1,0 +1,29 @@
+@use "my-vars" as *;
+
+.sideline-products {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.sideline-products__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: inherit;
+  margin: 0;
+  margin-bottom: 49px;
+}
+
+.sideline-products__food-name {
+  line-height: 16px;
+  font-weight: inherit;
+  text-transform: uppercase;
+  color: $raisin-black;
+}
+
+.sideline-products__food-number,
+.sideline-products__food-price {
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 14px;
+  color: $dark-gray;
+}
