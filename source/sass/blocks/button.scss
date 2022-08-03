@@ -1,9 +1,10 @@
-@use "my-vars" as *;
+@use "../my-vars" as *;
 
 .button {
   font-family: $oswald;
   font-size: 16px;
   line-height: 20px;
+  padding: 7px 0;
   background-color: $green;
   text-transform: uppercase;
   text-decoration: none;
