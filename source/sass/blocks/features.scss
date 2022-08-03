@@ -19,10 +19,13 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
 }
 
-.features__item:not(:last-child) {
-  margin-bottom: 20px;
+.features__item {
+  padding-left: 80px;
 }
 
 .features__description {

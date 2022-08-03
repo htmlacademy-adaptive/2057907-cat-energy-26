@@ -7,6 +7,12 @@
   padding: 25px 20px 40px 20px;
 }
 
+.stats__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .stats__title {
   font-size: 36px;
   line-height: 40px;
@@ -33,6 +39,11 @@
 .stats__list {
   margin: 0;
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 32px;
+  text-align: center;
 }
 
 .stats__number {
@@ -44,12 +55,14 @@
 .stats__item {
   text-transform: uppercase;
   padding-top: 15px;
+  flex-basis: 44%;
 
   &:last-child {
     padding-top: 20px;
+    flex-basis: auto;
   }
 }
 
-.comparison__controls {
-  margin-top: 15px;
+.stats__cost {
+  margin: 0;
 }

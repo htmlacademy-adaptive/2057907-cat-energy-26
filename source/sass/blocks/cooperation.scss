@@ -2,6 +2,7 @@
 
 .cooperation {
   padding: 26px 20px 26px 20px;
+  display: flex;
 
   &--bg-color {
     background-color: $white;
@@ -16,6 +17,11 @@
   color: $chinese-black;
   margin: 0;
   margin-right: 2px;
+  width: 50%;
+}
+
+.cooperation__address {
+  width: 50%;
 }
 
 .cooperation__address-text {
@@ -23,4 +29,5 @@
   font-style: normal;
   color: $dark-gray;
   margin: 0;
+  width: 100%;
 }

@@ -8,6 +8,15 @@
   color: #000000;
   text-transform: uppercase;
   padding: 10px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-nav__link {
@@ -19,3 +28,9 @@
   padding: 0;
   list-style-type: none;
 }
+
+.main-nav__toggle {
+  width: 24px;
+  height: 16px;
+}
+
