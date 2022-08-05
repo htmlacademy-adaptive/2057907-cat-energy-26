@@ -11,9 +11,14 @@
 
 .comparison__controls {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 23% auto 23%;
   column-gap: 13px;
   justify-items: center;
   padding: 0 35px;
   margin-top: 15px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 0 57px 0 59px;
+    grid-template-columns: 12% auto 12%;
+  }
 }

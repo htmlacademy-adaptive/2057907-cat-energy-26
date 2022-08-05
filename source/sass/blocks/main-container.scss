@@ -1,3 +1,13 @@
+@use "../my-vars" as *;
+
 .main-container {
   width: 100%;
+}
+
+.main-container__advantages {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-screen) {
+    margin-bottom: 45px;
+  }
 }

@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>«Cat Energy» — интернет-магазин функционального питания для котов</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="page__body">
@@ -111,39 +112,41 @@
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </div>
-        <p class="program-form__subtitle">Дополнительно</p>
+        <p class="program-form__subtitle program-form__subtitle--geometry">Дополнительно</p>
         <ul class="program-form__checkbox-list">
-          <li class="program-form__item">
+          <li class="program-form__item program-form__item--geometry">
             <label class="program-form__control">
               <input class="visually-hidden" type="checkbox" name="sweetener" checked>
               <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
               <span class="program-form__control-label">Cахарозаменитель</span>
             </label>
           </li>
-          <li class="program-form__item">
-            <label class="program-form__control">
-              <input class="visually-hidden" type="checkbox" name="fresh-water">
-              <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
-              <span class="program-form__control-label">Питьевая вода</span>
+          <li class="program-form__item program-form__item--geometry"">
+            <label class=" program-form__control">
+            <input class="visually-hidden" type="checkbox" name="fresh-water">
+            <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+            <span class="program-form__control-label">Питьевая вода</span>
             </label>
           </li>
-          <li class="program-form__item">
-            <label class="program-form__control">
-              <input class="visually-hidden" type="checkbox" name="milk">
-              <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
-              <span class="program-form__control-label">Молоко</span>
+          <li class="program-form__item program-form__item--geometry"">
+            <label class=" program-form__control">
+            <input class="visually-hidden" type="checkbox" name="milk">
+            <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+            <span class="program-form__control-label">Молоко</span>
             </label>
           </li>
-          <li class="program-form__item">
-            <label class="program-form__control">
-              <input class="visually-hidden" type="checkbox" name="vitamins">
-              <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
-              <span class="program-form__control-label">Витамины</span>
+          <li class="program-form__item program-form__item--geometry"">
+            <label class=" program-form__control">
+            <input class="visually-hidden" type="checkbox" name="vitamins">
+            <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+            <span class="program-form__control-label">Витамины</span>
             </label>
           </li>
         </ul>
-        <button class="program-form__button button" type="button">Отправить заявку</button>
-        <small class="program-form__legend">* — Обязательные поля</small>
+        <div class="program-form__button-legend-wrapper">
+          <button class="program-form__button button" type="button">Отправить заявку</button>
+          <small class="program-form__legend">* — Обязательные поля</small>
+        </div>
       </form>
     </section>
   </main>

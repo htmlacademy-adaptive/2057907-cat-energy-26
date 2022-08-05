@@ -7,6 +7,10 @@
 
 .card-product__link {
   text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding-bottom: 13px;
 }
 
 .card-product__title {
@@ -15,31 +19,51 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .card-product__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 19px;
 
   &:not(:last-child) {
     margin-bottom: 22px;
   }
 }
 
-.card-product__item {
-  padding: 11px 0 14px 0;
-  margin-bottom: 19px;
+.card-product__specification-list {
+  width: 100%;
+  margin-left: auto;
 }
 
-.card-product__specification,
-.card-product__value {
+.card-product__specification-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-product__item {
+  padding: 11px 0 14px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-product__image {
+  align-self: center;
+  justify-self: center;
+}
+
+.card-product__specification-name,
+.card-product__specification-value {
   font-family: $arial;
   font-size: 12px;
   line-height: 16px;
   color: $dark-gray;
 }
 
-.card-product__value {
+.card-product__specification-value {
   margin: 0;
 }

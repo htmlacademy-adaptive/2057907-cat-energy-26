@@ -2,17 +2,25 @@
 
 .features {
   font-family: $arial;
-  line-height: 18px;
+  line-height: 1.5;
   padding: 0 20px 49px 20px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 0 4% 47px 4%;
+  }
 }
 
 .features__title {
   font-family: $oswald;
   font-size: 36px;
-  line-height: 40px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -22,12 +30,59 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
+  counter-reset: features-item-counter;
+
+  @media (min-width: $tablet-screen) {
+    grid-template-columns: repeat(2, 35%);
+    row-gap: 37px;
+    column-gap: 137px;
+  }
 }
 
 .features__item {
   padding-left: 80px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 0;
+    padding-top: 111px;
+    min-height: 280px;
+  }
+}
+
+.features__counter {
+
+  @media (min-width: $tablet-screen) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      counter-increment: features-item-counter;
+      content: counter(features-item-counter);
+      font-family: $oswald;
+      font-size: 280px;
+      line-height: 280px;
+      color: $gray;
+      z-index: -3;
+      bottom: 40px;
+      right: 24px;
+    }
+
+    &:nth-child(2)::after {
+      right: 2px;
+    }
+
+    &:nth-child(3)::after,
+    &:nth-child(4)::after {
+      right: 0;
+    }
+  }
 }
 
 .features__description {
   margin: 0;
+  color: $dark-gray;
+
+  @media (min-width: $tablet-screen) {
+
+  }
 }

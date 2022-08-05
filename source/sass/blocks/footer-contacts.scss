@@ -5,11 +5,21 @@
   flex-direction: column;
   align-items: center;
   padding: 39px 20px 22px 20px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 59px 4% 55px 4%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .footer-contacts__logo-link {
   display: block;
   margin-bottom: 52px;
+
+  @media (min-width: $tablet-screen) {
+    margin-bottom: 0;
+  }
 }
 
 .footer-contacts__copyright-link {
@@ -17,6 +27,10 @@
   display: flex;
   align-items: center;
   width: 100%;
+
+  @media (min-width: $tablet-screen) {
+    width: 23%;
+  }
 }
 
 .footer-contacts__copyright-title {

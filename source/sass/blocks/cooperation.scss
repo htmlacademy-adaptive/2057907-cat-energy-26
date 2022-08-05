@@ -3,9 +3,14 @@
 .cooperation {
   padding: 26px 20px 26px 20px;
   display: flex;
+  justify-content: space-between;
 
   &--bg-color {
     background-color: $white;
+  }
+
+  @media (min-width: $tablet-screen) {
+    padding: 56px 70px;
   }
 }
 
@@ -18,16 +23,25 @@
   margin: 0;
   margin-right: 2px;
   width: 50%;
+
+  @media (min-width: $tablet-screen) {
+    width: 27%;
+    font-size: 20px;
+    line-height: 1.3;
+  }
 }
 
 .cooperation__address {
   width: 50%;
+  font-style: normal;
+  color: $dark-gray;
+
+  @media (min-width: $tablet-screen) {
+    width: 25%;
+  }
 }
 
 .cooperation__address-text {
-  font-size: 14px;
-  font-style: normal;
-  color: $dark-gray;
   margin: 0;
   width: 100%;
 }

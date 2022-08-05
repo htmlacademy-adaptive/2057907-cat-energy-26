@@ -2,9 +2,14 @@
 
 .stats {
   font-family: $oswald;
-  line-height: 20px;
+  line-height: 1.2;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 1) 100%);
   padding: 25px 20px 40px 20px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 43px 4% 56px 4%;
+    background: none;
+  }
 }
 
 .stats__wrapper {
@@ -15,54 +20,86 @@
 
 .stats__title {
   font-size: 36px;
-  line-height: 40px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 60px;
+    margin-bottom: 63px;
+  }
 }
 
 .stats__description {
   font-family: $arial;
-  line-height: 18px;
   color: $dark-gray;
   margin: 0;
   margin-bottom: 20px;
 
+  @media (min-width: $tablet-screen) {
+    line-height: 1.5;
+    margin-bottom: 54px;
+  }
+
   &--font-size-s {
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 14px;
     text-transform: lowercase;
     margin: 0;
+
+    @media (min-width: $tablet-screen) {
+      line-height: 1.5;
+      margin-bottom: 54px;
+    }
   }
 }
 
 .stats__list {
   margin: 0;
   margin-bottom: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 44%);
   column-gap: 32px;
   text-align: center;
+
+  @media (min-width: $tablet-screen) {
+    grid-template-columns: 23% 23% auto;
+    column-gap: 42px;
+  }
 }
 
 .stats__number {
   font-size: 24px;
-  line-height: 24px;
   margin-bottom: 8px;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 30px;
+    margin-bottom: 11px;
+  }
 }
 
 .stats__item {
   text-transform: uppercase;
   padding-top: 15px;
-  flex-basis: 44%;
 
   &:last-child {
     padding-top: 20px;
-    flex-basis: auto;
+    grid-column: 1 / -1;
+
+    @media (min-width: $tablet-screen) {
+      grid-column: auto;
+      justify-self: end;
+      text-align: end;
+    }
   }
 }
 
 .stats__cost {
   margin: 0;
+}
+
+.stats__spending,
+.stats__cost {
+  @media (min-width: $tablet-screen) {
+    font-size: 20px;
+  }
 }
