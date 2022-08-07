@@ -62,7 +62,7 @@
   width: 100%;
 
   &--geometry {
-    @media (min-width: 768px) {
+    @include media(md) {
       margin-top: 18px;
     }
   }

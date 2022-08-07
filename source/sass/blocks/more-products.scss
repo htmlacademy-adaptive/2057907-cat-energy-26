@@ -9,7 +9,7 @@
   grid-template-columns: 1fr;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @include media(md) {
     background-image: none;
     padding: 38px;
     padding-top: 0;
@@ -30,7 +30,7 @@
   padding-top: 53px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @include media(md) {
     padding-top: 109px;
     margin-bottom: 23px;
     width: 54%;
@@ -52,7 +52,7 @@
   margin-bottom: 21px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @include media(md) {
     font-size: 16px;
     line-height: 1.12;
     margin-bottom: 87px;

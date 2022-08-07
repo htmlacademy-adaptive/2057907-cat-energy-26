@@ -24,7 +24,7 @@
 .catalog__products {
   margin-bottom: 25px;
 
-  @media (min-width: 768px) {
+  @include media(md) {
     margin-bottom: 68px;
   }
 
@@ -52,7 +52,7 @@
 .catalog__sideline-products {
   margin-bottom: 35px;
 
-  @media (min-width: 768px) {
+  @include media(md) {
     margin-bottom: 69px;
   }
 
