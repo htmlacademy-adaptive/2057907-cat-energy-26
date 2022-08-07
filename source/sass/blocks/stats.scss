@@ -7,8 +7,14 @@
   padding: 25px 20px 40px 20px;
 
   @media (min-width: $tablet-screen) {
+    background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(242,242,242,1) 60%, rgba(242,242,242,1) 100%);
     padding: 43px 4% 56px 4%;
-    background: none;
+  }
+
+  @media (min-width: 1280px) {
+    background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 28%, rgba(242,242,242,1) 28%, rgba(242,242,242,1) 100%);
+    padding: 0;
+    padding-bottom: 65px;
   }
 }
 
@@ -16,6 +22,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1280px) {
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+  }
 }
 
 .stats__title {
@@ -27,6 +39,12 @@
   @media (min-width: $tablet-screen) {
     font-size: 60px;
     margin-bottom: 63px;
+  }
+
+  @media (min-width: 1220px) {
+    width: 50%;
+    margin-bottom: 76px;
+    margin-top: 43px;
   }
 }
 
@@ -41,6 +59,12 @@
     margin-bottom: 54px;
   }
 
+  @media (min-width: 1280px) {
+    width: 436px;
+    margin-bottom: 69px;
+    margin-top: 70px;
+  }
+
   &--font-size-s {
     font-size: 14px;
     text-transform: lowercase;
@@ -49,6 +73,11 @@
     @media (min-width: $tablet-screen) {
       line-height: 1.5;
       margin-bottom: 54px;
+    }
+
+    @media (min-width: 1280px) {
+      margin: 0;
+      width: 100%;
     }
   }
 }
@@ -64,6 +93,13 @@
   @media (min-width: $tablet-screen) {
     grid-template-columns: 23% 23% auto;
     column-gap: 42px;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 162px 162px;
+    width: 436px;
+    row-gap: 55px;
+    margin: 0;
   }
 }
 
@@ -81,7 +117,11 @@
   text-transform: uppercase;
   padding-top: 15px;
 
-  &:last-child {
+  @media (min-width: 1280px) {
+    padding: 15px 10px 0 10px;
+  }
+
+  &--geometry {
     padding-top: 20px;
     grid-column: 1 / -1;
 
@@ -89,6 +129,16 @@
       grid-column: auto;
       justify-self: end;
       text-align: end;
+    }
+
+    @media (min-width: 1280px) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      padding: 0;
+      width: 100%;
+      justify-self: flex-start;
+      display: flex;
+      column-gap: 63px;
     }
   }
 }
@@ -101,5 +151,13 @@
 .stats__cost {
   @media (min-width: $tablet-screen) {
     font-size: 20px;
+  }
+}
+
+.stats__comparison {
+  @media (min-width: 1280px) {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }

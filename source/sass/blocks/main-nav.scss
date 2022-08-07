@@ -20,6 +20,14 @@
     padding: 38px 4% 12px 4%;
     align-items: center;
   }
+
+  @media (min-width: 1280px) {
+    padding: 0;
+    padding-top: 69px;
+    padding-bottom: 32px;
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .main-nav__wrapper {

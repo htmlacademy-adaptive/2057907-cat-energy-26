@@ -1,8 +1,22 @@
 @use "../my-vars" as *;
 
+
+.comparison {
+  width: 100%;
+
+  @media (min-width: 1280px) {
+    width: 591px;
+  }
+}
+
 .comparison__button {
   background-color: inherit;
   color: inherit;
+
+  @media (min-width: 1280px) {
+    width: 70px;
+    min-height: 40px;
+  }
 }
 
 .comparison__input {
@@ -19,6 +33,13 @@
 
   @media (min-width: $tablet-screen) {
     padding: 0 57px 0 59px;
-    grid-template-columns: 12% auto 12%;
+    grid-template-columns: 70px auto 70px;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 70px 426px 70px;
+    margin-top: 25px;
+    width: 592px;
+    padding: 0;
   }
 }

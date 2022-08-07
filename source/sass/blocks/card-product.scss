@@ -1,25 +1,60 @@
 @use "../my-vars" as *;
 
-
-.card-product {
-  padding-bottom: 25px;
-}
-
 .card-product__link {
   text-decoration: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  padding-bottom: 13px;
+
+  @media (min-width: $tablet-screen) {
+    grid-template-columns: 1fr;
+    row-gap: 34px;
+  }
+
+  @media (min-width: 1280px) {
+    row-gap: 46px;
+  }
+}
+
+.card-product__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  padding-bottom: 9px;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-screen) {
+    align-items: center;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    row-gap: 21px;
+  }
 }
 
 .card-product__title {
+  font-size: 16px;
+  line-height: 1.25;
   font-weight: inherit;
   color: $raisin-black;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 20px;
-  width: 100%;
+  width: 54%;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 20px;
+    line-height: 1.2;
+    width: 63%;
+    text-align: center;
+  }
+
+  @media (min-width: 1280px) {
+    width: 145px;
+  }
 }
 
 .card-product__list {
@@ -30,25 +65,55 @@
   grid-template-columns: 1fr;
   row-gap: 19px;
 
-  &:not(:last-child) {
-    margin-bottom: 22px;
+  @media (min-width: $tablet-screen) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 63px;
   }
 }
 
 .card-product__specification-list {
   width: 100%;
-  margin-left: auto;
+  margin: 0;
 }
 
 .card-product__specification-item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-screen) {
+    padding-bottom: 9px;
+    margin-bottom: 5px;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-screen) {
+      margin: 0;
+    }
+  }
+
 }
 
 .card-product__item {
-  padding: 11px 0 14px 0;
+  padding: 19px 0 25px 0;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-screen) {
+    padding: 36px;
+    padding-bottom: 39px;
+    padding-top: 0;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(242, 242, 242, 1) 20%, rgba(242, 242, 242, 1) 100%);
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0 30px 40px 35px;
+  }
 }
 
 .card-product__image {
@@ -60,8 +125,12 @@
 .card-product__specification-value {
   font-family: $arial;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   color: $dark-gray;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 16px;
+  }
 }
 
 .card-product__specification-value {

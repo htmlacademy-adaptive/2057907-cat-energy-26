@@ -4,4 +4,16 @@
   font-family: $arial;
   line-height: 1.2;
   background-color: $gray;
+
+  @media (min-width: 1280px) {
+    position: relative;
+  }
+}
+
+.main-footer__cooperation {
+  @media (min-width: 1280px) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+  }
 }

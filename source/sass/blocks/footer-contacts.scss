@@ -11,6 +11,12 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  @media (min-width: 1280px) {
+    padding: 57px 0 58px 0;
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .footer-contacts__logo-link {
@@ -29,7 +35,7 @@
   width: 100%;
 
   @media (min-width: $tablet-screen) {
-    width: 23%;
+    width: 163px;
   }
 }
 

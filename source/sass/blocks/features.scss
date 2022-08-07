@@ -8,6 +8,11 @@
   @media (min-width: $tablet-screen) {
     padding: 0 4% 47px 4%;
   }
+
+  @media (min-width: 1280px) {
+    padding: 0;
+    width: 1220px;
+  }
 }
 
 .features__title {
@@ -37,6 +42,12 @@
     row-gap: 37px;
     column-gap: 137px;
   }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: 230px 246px 248px 250px;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 .features__item {
@@ -44,17 +55,18 @@
 
   @media (min-width: $tablet-screen) {
     padding: 0;
-    padding-top: 111px;
-    min-height: 280px;
+    padding-top: 151px;
+    padding-bottom: 57px;
   }
 }
 
 .features__counter {
-
   @media (min-width: $tablet-screen) {
     position: relative;
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: $tablet-screen) {
       position: absolute;
       counter-increment: features-item-counter;
       content: counter(features-item-counter);
@@ -67,12 +79,25 @@
       right: 24px;
     }
 
-    &:nth-child(2)::after {
+    @media (min-width: 1280px) {
+      bottom: 0;
+      right: 6px;
+    }
+  }
+
+  &:nth-child(2)::after {
+    @media (min-width: $tablet-screen) {
       right: 2px;
     }
 
-    &:nth-child(3)::after,
-    &:nth-child(4)::after {
+    @media (min-width: 1280px) {
+      right: 1px;
+    }
+  }
+
+  &:nth-child(3)::after,
+  &:nth-child(4)::after {
+    @media (min-width: $tablet-screen) {
       right: 0;
     }
   }
@@ -81,8 +106,4 @@
 .features__description {
   margin: 0;
   color: $dark-gray;
-
-  @media (min-width: $tablet-screen) {
-
-  }
 }

@@ -18,4 +18,8 @@
   @media (min-width: $tablet-screen) {
     font-size: 20px;
   }
+
+  @media (min-width: 1280px) {
+    width: 168px;
+  }
 }

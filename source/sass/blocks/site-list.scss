@@ -6,12 +6,17 @@
   align-self: center;
   text-align: center;
   padding: 22px 0 24px 0;
+
   @media (min-width: $tablet-screen) {
     flex-direction: row;
     align-items: center;
     padding: 0;
     width: 62%;
     justify-content: space-between;
+  }
+
+  @media (min-width: 1280px) {
+    width: calc(39% + 2px);
   }
 }
 
@@ -29,8 +34,9 @@
 
 .site-list__item--current {
   position: relative;
-  @media (min-width: $tablet-screen) {
-    &:after {
+
+  &::after {
+    @media (min-width: $tablet-screen) {
       content: "";
       position: absolute;
       width: 100%;
@@ -42,7 +48,21 @@
   }
 }
 
+.site-list__item--current-index-theme {
+  &::after {
+    @media (min-width: 1280px) {
+      background-color: $white;
+    }
+  }
+}
+
 .site-list__link {
   text-decoration: none;
   color: inherit;
+}
+
+.site-list__link--text-color {
+  @media (min-width: 1280px) {
+    color: $white;
+  }
 }

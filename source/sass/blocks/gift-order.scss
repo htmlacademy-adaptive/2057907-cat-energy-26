@@ -9,6 +9,23 @@
   background-repeat: no-repeat;
   background-size: 100%, contain, 100%;
   background-position-x: center;
+
+  @media (min-width: 768px) {
+    min-height: 200px;
+    background-image: linear-gradient(180deg, rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%),
+    url("../img/decorative/background-gift-cat-tablet.png"),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(199, 199, 199, 0.85) 30%, rgba(199, 199, 199, 1) 70%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  @media (min-width: 1280px) {
+    width: 245px;
+    min-height: 289px;
+    position: absolute;
+    bottom: 101px;
+    right: 0;
+    background-image: linear-gradient(180deg, rgba(104, 183, 56, 0.85) 0%, rgba(104, 183, 56, 0.85) 100%),
+    url("../img/decorative/background-gift-cat-desktop.png");
+  }
 }
 
 .gift-order__slogan {
@@ -18,4 +35,22 @@
   padding-top: 187px;
   display: block;
   text-align: center;
+
+  @media (min-width: 768px) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: start;
+    padding-left: 345px;
+    margin-left: 77px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0;
+    padding: 0;
+    padding-top: 185px;
+    width: 161px;
+    margin: 0 auto;
+  }
 }

@@ -1,12 +1,17 @@
 @use "../my-vars" as *;
 
-.sideline-products {
-  padding-top: 25px;
-  padding-bottom: 35px;
-}
-
 .sideline-products__table {
   width: 100%;
+
+  @media (min-width: 768px) {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0;
+    width: 896px;
+  }
 }
 
 .sideline-products__table-body,
@@ -19,49 +24,123 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 31px;
-  &:last-child {
-    margin-bottom: 19px;
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    padding-top: 26px;
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 15px;
+    padding-bottom: 17px;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 
 .sideline-products__title {
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1.2;
   font-weight: inherit;
   margin: 0;
-  margin-bottom: 49px;
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 80px;
+    padding-left: 36px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 0;
+    margin-bottom: 81px;
+  }
 }
 
 .sideline-products__food-name {
-  line-height: 16px;
+  line-height: 1.2;
   font-weight: inherit;
   text-transform: uppercase;
   color: $raisin-black;
   width: 100%;
   text-align: start;
   margin-bottom: 13px;
+
+  @media (min-width: 768px) {
+    width: fit-content;
+  }
+
+  @media (min-width: 1280px) {
+    width: 305px;
+    margin: 0;
+    margin-right: 20px;
+  }
 }
 
 .sideline-products__food-number,
 .sideline-products__food-price {
   font-family: $arial;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 1.25;
   color: $dark-gray;
-  width: 50%;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    margin-left: auto;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0;
+  }
+}
+
+.sideline-products__food-number {
+  @media (min-width: 1280px) {
+    width: 223px;
+    margin-right: 20px;
+  }
 }
 
 .sideline-products__food-price {
   text-align: end;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    width: 13%;
+    margin-left: 12px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 60px;
+    margin: 0;
+    margin-right: 20px;
+    text-align: start;
+  }
 }
 
 .sideline-products__order {
   display: flex;
   width: 100%;
   margin-top: 15px;
+
+  @media (min-width: 1280px) {
+    width: 244px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .sideline-products__button {
   margin: 0 auto;
+
+  @media (min-width: 1280px) {
+    margin: 0;
+    font-size: 16px;
+    width: 244px;
+    min-height: 40px;
+  }
 }

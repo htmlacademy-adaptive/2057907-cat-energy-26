@@ -3,15 +3,59 @@
 .catalog {
   font-family: $oswald;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.2;
   font-weight: 400;
   padding: 27px 20px 35px 20px;
+
+  @media (min-width: $tablet-screen) {
+    padding: 65px 4% 76px 4%;
+    font-size: 20px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 46px 0 86px 0;
+    width: 1220px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.catalog__products {
+  margin-bottom: 25px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 76px;
+  }
 }
 
 .catalog__title {
   font-size: 36px;
-  line-height: 36px;
   font-weight: inherit;
   margin: 0;
   margin-bottom: 49px;
+
+  @media (min-width: $tablet-screen) {
+    font-size: 60px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 84px;
+  }
+}
+
+.catalog__sideline-products {
+  margin-bottom: 35px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0;
+  }
 }

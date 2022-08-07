@@ -10,4 +10,22 @@
   @media (min-width: $tablet-screen) {
     margin-bottom: 45px;
   }
+
+  @media (min-width: 1280px) {
+    margin: 0 auto;
+    margin-bottom: 71px;
+  }
+}
+
+.main-container__hero-section {
+  @media (min-width: 1280px) {
+    margin-bottom: 82px;
+  }
+}
+
+.main-container__features {
+  @media (min-width: 1280px) {
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
 }
