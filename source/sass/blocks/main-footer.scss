@@ -1,17 +1,17 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .main-footer {
   font-family: $arial;
   line-height: 1.2;
   background-color: $gray;
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     position: relative;
   }
 }
 
 .main-footer__cooperation {
-  @media (min-width: 1280px) {
+  @include media(xl) {
     position: absolute;
     top: 95px;
     left: 110px;

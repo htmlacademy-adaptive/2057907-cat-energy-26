@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .main-container {
   width: 100%;
@@ -7,24 +7,30 @@
 .main-container__advantages {
   margin-bottom: 20px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin-bottom: 45px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin: 0 auto;
     margin-bottom: 71px;
   }
 }
 
 .main-container__hero-section {
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin-bottom: 82px;
   }
 }
 
 .main-container__features {
-  @media (min-width: 1280px) {
+  margin-bottom: 49px;
+
+  @include media(md) {
+    margin-bottom: 43px;
+  }
+
+  @include media(xl) {
     margin: 0 auto;
     margin-bottom: 26px;
   }

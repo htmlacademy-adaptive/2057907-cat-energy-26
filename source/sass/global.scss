@@ -1,4 +1,4 @@
-@use "my-vars" as *;
+@use "abstract" as *;
 
 *,
 *::after,
@@ -12,7 +12,7 @@ body {
   font-size: 14px;
   width: 100%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 16px;
   }
 }

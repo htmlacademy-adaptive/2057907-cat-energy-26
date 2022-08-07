@@ -1,17 +1,15 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .features {
   font-family: $arial;
   line-height: 1.5;
-  padding: 0 20px 49px 20px;
 
-  @media (min-width: $tablet-screen) {
-    padding: 0 4% 47px 4%;
+  @include media(md) {
+    padding-bottom: 47px;
   }
 
-  @media (min-width: 1280px) {
-    padding: 0;
-    width: 1220px;
+  @include media(xl) {
+    padding-bottom: 0;
   }
 }
 
@@ -22,7 +20,7 @@
   margin: 0;
   margin-bottom: 40px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 60px;
     margin-bottom: 32px;
   }
@@ -37,13 +35,13 @@
   row-gap: 20px;
   counter-reset: features-item-counter;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     grid-template-columns: repeat(2, 35%);
     row-gap: 37px;
     column-gap: 137px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     grid-template-columns: 230px 246px 248px 250px;
     justify-content: space-between;
     gap: 0;
@@ -53,7 +51,7 @@
 .features__item {
   padding-left: 80px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding: 0;
     padding-top: 151px;
     padding-bottom: 57px;
@@ -61,12 +59,12 @@
 }
 
 .features__counter {
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     position: relative;
   }
 
   &::after {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       position: absolute;
       counter-increment: features-item-counter;
       content: counter(features-item-counter);
@@ -79,25 +77,25 @@
       right: 24px;
     }
 
-    @media (min-width: 1280px) {
+    @include media(xl) {
       bottom: 0;
       right: 6px;
     }
   }
 
   &:nth-child(2)::after {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       right: 2px;
     }
 
-    @media (min-width: 1280px) {
+    @include media(xl) {
       right: 1px;
     }
   }
 
   &:nth-child(3)::after,
   &:nth-child(4)::after {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       right: 0;
     }
   }

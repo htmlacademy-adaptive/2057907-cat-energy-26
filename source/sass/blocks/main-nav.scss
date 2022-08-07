@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .main-nav {
   font-family: $oswald;
@@ -7,26 +7,24 @@
   line-height: 1.33;
   color: #000000;
   text-transform: uppercase;
-  padding: 10px 6% 0 6%;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-weight: 400;
     font-size: 18px;
     flex-direction: row;
     justify-content: space-between;
-    padding: 38px 4% 12px 4%;
+    padding-top: 38px;
+    padding-bottom: 12px;
     align-items: center;
   }
 
-  @media (min-width: 1280px) {
-    padding: 0;
+  @include media(xl) {
     padding-top: 69px;
     padding-bottom: 32px;
-    width: 1220px;
-    margin: 0 auto;
   }
 }
 
@@ -50,7 +48,7 @@
   width: 24px;
   height: 16px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     display: none;
   }
 }

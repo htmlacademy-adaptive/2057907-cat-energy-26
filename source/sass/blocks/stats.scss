@@ -1,31 +1,30 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .stats {
   font-family: $oswald;
   line-height: 1.2;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 1) 100%);
-  padding: 25px 20px 40px 20px;
+  padding-top: 25px;
+  padding-bottom: 40px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(242, 242, 242, 1) 60%, rgba(242, 242, 242, 1) 100%);
-    padding: 43px 4% 56px 4%;
+    padding-top: 43px;
+    padding-bottom: 55px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 28%, rgba(242, 242, 242, 1) 28%, rgba(242, 242, 242, 1) 100%);
-    padding: 0;
-    padding-bottom: 65px;
+    padding-top: 0;
+    padding-bottom: 75px;
   }
 }
 
 .stats__wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 1280px) {
-    width: 1220px;
-    margin: 0 auto;
+  @include media(xl) {
     position: relative;
   }
 }
@@ -36,7 +35,7 @@
   margin: 0;
   margin-bottom: 40px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 60px;
     margin-bottom: 63px;
   }
@@ -54,12 +53,12 @@
   margin: 0;
   margin-bottom: 20px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     line-height: 1.5;
     margin-bottom: 54px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 436px;
     margin-bottom: 69px;
     margin-top: 70px;
@@ -70,12 +69,12 @@
     text-transform: lowercase;
     margin: 0;
 
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       line-height: 1.5;
       margin-bottom: 54px;
     }
 
-    @media (min-width: 1280px) {
+    @include media(xl) {
       margin: 0;
       width: 100%;
     }
@@ -90,12 +89,12 @@
   column-gap: 32px;
   text-align: center;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     grid-template-columns: 23% 23% auto;
     column-gap: 42px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     grid-template-columns: 162px 162px;
     width: 436px;
     row-gap: 55px;
@@ -107,7 +106,7 @@
   font-size: 24px;
   margin-bottom: 8px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 30px;
     margin-bottom: 11px;
   }
@@ -117,7 +116,7 @@
   text-transform: uppercase;
   padding-top: 15px;
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     padding: 15px 10px 0 10px;
   }
 
@@ -125,13 +124,13 @@
     padding-top: 20px;
     grid-column: 1 / -1;
 
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       grid-column: auto;
       justify-self: end;
       text-align: end;
     }
 
-    @media (min-width: 1280px) {
+    @include media(xl) {
       grid-column: 1 / -1;
       padding: 0;
       width: 100%;
@@ -148,13 +147,13 @@
 
 .stats__spending,
 .stats__cost {
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 20px;
   }
 }
 
 .stats__comparison {
-  @media (min-width: 1280px) {
+  @include media(xl) {
     position: absolute;
     top: 0;
     right: 0;

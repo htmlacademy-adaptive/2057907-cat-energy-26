@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .more-products {
   padding: 0;
@@ -17,7 +17,7 @@
     align-items: flex-start;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     padding: 51px 39px 41px 39px;
   }
 }
@@ -37,7 +37,7 @@
     line-height: 1.1;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin-bottom: 49px;
     width: 134px;
   }

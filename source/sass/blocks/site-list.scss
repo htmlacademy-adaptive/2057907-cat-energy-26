@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .site-list {
   display: flex;
@@ -7,7 +7,7 @@
   text-align: center;
   padding: 22px 0 24px 0;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     flex-direction: row;
     align-items: center;
     padding: 0;
@@ -15,7 +15,7 @@
     justify-content: space-between;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: calc(39% + 2px);
   }
 }
@@ -27,7 +27,7 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin: 0;
   }
 }
@@ -36,7 +36,7 @@
   position: relative;
 
   &::after {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       content: "";
       position: absolute;
       width: 100%;
@@ -50,7 +50,7 @@
 
 .site-list__item--current-index-theme {
   &::after {
-    @media (min-width: 1280px) {
+    @include media(xl) {
       background-color: $white;
     }
   }
@@ -62,7 +62,7 @@
 }
 
 .site-list__link--text-color {
-  @media (min-width: 1280px) {
+  @include media(xl) {
     color: $white;
   }
 }

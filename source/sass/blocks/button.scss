@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .button {
   font-family: $oswald;
@@ -15,11 +15,11 @@
   text-align: center;
   margin: 0 auto;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 20px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 168px;
   }
 }

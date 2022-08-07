@@ -1,19 +1,22 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .footer-contacts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 39px 20px 22px 20px;
+  padding-top: 39px;
+  padding-bottom: 22px;
 
-  @media (min-width: $tablet-screen) {
-    padding: 59px 4% 55px 4%;
+  @include media(md) {
+    padding-top: 58px;
+    padding-bottom: 55px;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  @media (min-width: 1280px) {
-    padding: 57px 0 58px 0;
+  @include media(xl) {
+    padding-top: 57px;
+    padding-bottom: 58px;
     width: 1220px;
     margin: 0 auto;
   }
@@ -23,7 +26,7 @@
   display: block;
   margin-bottom: 52px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin-bottom: 0;
   }
 }
@@ -34,7 +37,7 @@
   align-items: center;
   width: 100%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     width: 163px;
   }
 }

@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .card-product__link {
   text-decoration: none;
@@ -6,12 +6,12 @@
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     grid-template-columns: 1fr;
     row-gap: 34px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     row-gap: 46px;
   }
 }
@@ -23,12 +23,12 @@
   padding-bottom: 9px;
   margin-bottom: 22px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     align-items: center;
     margin-bottom: 33px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     padding: 0;
     padding-left: 5px;
     padding-right: 5px;
@@ -45,14 +45,14 @@
   margin: 0;
   width: 54%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 20px;
     line-height: 1.2;
     width: 63%;
     text-align: center;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 145px;
   }
 }
@@ -65,12 +65,12 @@
   grid-template-columns: 1fr;
   row-gap: 19px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
     row-gap: 63px;
@@ -86,13 +86,13 @@
   display: flex;
   justify-content: space-between;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding-bottom: 9px;
     margin-bottom: 5px;
   }
 
   &:last-child {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       margin: 0;
     }
   }
@@ -103,14 +103,14 @@
   display: flex;
   flex-wrap: wrap;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding: 36px;
     padding-bottom: 39px;
     padding-top: 0;
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(242, 242, 242, 1) 20%, rgba(242, 242, 242, 1) 100%);
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     padding: 0 30px 40px 35px;
   }
 }
@@ -127,7 +127,7 @@
   line-height: 1.33;
   color: $dark-gray;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 16px;
   }
 }

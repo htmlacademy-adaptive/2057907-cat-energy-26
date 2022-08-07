@@ -1,10 +1,10 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 
 .comparison {
   width: 100%;
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 591px;
   }
 }
@@ -13,7 +13,7 @@
   background-color: inherit;
   color: inherit;
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 70px;
     min-height: 40px;
   }
@@ -31,12 +31,12 @@
   padding: 0 35px;
   margin-top: 15px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding: 0 57px 0 59px;
     grid-template-columns: 70px auto 70px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     grid-template-columns: 70px 426px 70px;
     margin-top: 25px;
     width: 592px;

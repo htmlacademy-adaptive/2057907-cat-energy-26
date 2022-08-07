@@ -1,21 +1,20 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .program-select {
   font-family: $oswald;
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  padding: 27px 20px 32px 20px;
+  padding-top: 27px;
+  padding-bottom: 32px;
 
-  @media (min-width: $tablet-screen) {
-    padding: 65px calc(4% + 37px) 72px calc(4% + 39px);
+  @include media(md) {
+    padding: 53px 70px 72px 70px;
     font-size: 20px;
   }
 
-  @media (min-width: 1280px) {
-    padding: 77px 0 82px 0;
-    width: 1220px;
-    margin: 0 auto;
+  @include media(xl) {
+    padding: 45px 30px 82px 30px;
   }
 }
 
@@ -26,12 +25,12 @@
   margin: 0;
   margin-bottom: 37px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 60px;
     margin-bottom: 54px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin-bottom: 56px;
   }
 }
@@ -42,7 +41,7 @@
   margin: 0;
   margin-bottom: 39px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 66px;

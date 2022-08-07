@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .cooperation {
   padding: 26px 20px 26px 20px;
@@ -9,11 +9,11 @@
     background-color: $white;
   }
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding: 56px 70px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     background-color: $white;
     width: 565px;
     padding: 56px 80px;
@@ -30,13 +30,13 @@
   margin-right: 2px;
   width: 50%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     width: 27%;
     font-size: 20px;
     line-height: 1.3;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 163px;
   }
 }
@@ -46,12 +46,12 @@
   font-style: normal;
   color: $dark-gray;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     width: 25%;
     text-align: right;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 155px;
     text-align: start;
   }

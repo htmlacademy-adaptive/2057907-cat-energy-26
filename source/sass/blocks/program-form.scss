@@ -1,4 +1,4 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .program-form {
   display: flex;
@@ -15,17 +15,17 @@
   column-gap: 13px;
   white-space: nowrap;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin-bottom: 20px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 569px;
     margin: 0;
   }
 
   &--geometry {
-    @media (min-width: 1280px) {
+    @include media(xl) {
       width: 100%;
     }
   }
@@ -36,11 +36,11 @@
   flex-direction: column;
   margin-bottom: 45px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin-bottom: 71px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     display: grid;
     grid-template-columns: repeat(2, 569px);
     grid-template-rows: repeat(3, 52px);
@@ -55,11 +55,11 @@
   flex-direction: column;
   margin-bottom: 23px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin-bottom: 65px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -81,7 +81,7 @@
   padding: 13px 0 14px 16px;
   width: 100%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     min-height: 52px;
     padding: 0;
     padding-left: 19px;
@@ -105,17 +105,17 @@
   margin-bottom: 35px;
   width: 100%;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 36px;
     margin-bottom: 76px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 100%;
   }
 
   &--geometry {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       margin-bottom: 57px;
     }
   }
@@ -124,11 +124,11 @@
 .program-form__comment-group {
   margin-bottom: 10px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin-bottom: 56px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin-bottom: 67px;
   }
 }
@@ -143,7 +143,7 @@
   min-height: 174px;
   text-align: center;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 20px;
     line-height: 1.5;
   }
@@ -156,7 +156,7 @@
   display: block;
   margin: 0 auto;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 16px;
     margin: 0;
   }
@@ -170,7 +170,7 @@
 }
 
 .program-form__list {
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding: 25px 28px;
   }
 }
@@ -181,14 +181,14 @@
   align-items: center;
   margin-bottom: 41px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     grid-template-columns: repeat(2, 35%);
     column-gap: 123px;
     row-gap: 32px;
     margin-bottom: 54px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     grid-template-columns: repeat(4, 221px);
     column-gap: 104px;
     margin-bottom: 61px;
@@ -198,13 +198,13 @@
 .program-form__item {
   margin-bottom: 13px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     min-height: 40px;
     padding-left: 59px;
   }
 
   &--geometry {
-    @media (min-width: $tablet-screen) {
+    @include media(md) {
       margin: 0;
     }
   }
@@ -217,11 +217,11 @@
     padding: 0;
   }
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     padding-top: 52px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
     padding: 0;
@@ -231,13 +231,13 @@
 .program-form__button {
   margin-bottom: 21px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     margin: 0;
     width: 45%;
     padding: 13px 0;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     width: 568px;
   }
 }
@@ -247,13 +247,13 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     flex-direction: row;
     align-items: center;
     column-gap: 61px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     column-gap: 81px;
   }
 }

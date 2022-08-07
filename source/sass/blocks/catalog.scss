@@ -1,21 +1,22 @@
-@use "../my-vars" as *;
+@use "../abstract" as *;
 
 .catalog {
   font-family: $oswald;
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  padding: 27px 20px 35px 20px;
+  padding-top: 27px;
+  padding-bottom: 35px;
 
-  @media (min-width: $tablet-screen) {
-    padding: 65px 4% 76px 4%;
+  @include media(md) {
+    padding-top: 53px;
+    padding-bottom: 76px;
     font-size: 20px;
   }
 
-  @media (min-width: 1280px) {
-    padding: 46px 0 86px 0;
-    width: 1220px;
-    margin: 0 auto;
+  @include media(xl) {
+    padding-top: 42px;
+    padding-bottom: 86px;
     position: relative;
   }
 }
@@ -27,7 +28,7 @@
     margin-bottom: 68px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin-bottom: 76px;
   }
 }
@@ -38,12 +39,12 @@
   margin: 0;
   margin-bottom: 49px;
 
-  @media (min-width: $tablet-screen) {
+  @include media(md) {
     font-size: 60px;
     margin-bottom: 82px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin-bottom: 84px;
   }
 }
@@ -55,7 +56,7 @@
     margin-bottom: 69px;
   }
 
-  @media (min-width: 1280px) {
+  @include media(xl) {
     margin: 0;
   }
 }
