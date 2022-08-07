@@ -7,12 +7,12 @@
   padding: 25px 20px 40px 20px;
 
   @media (min-width: $tablet-screen) {
-    background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(242,242,242,1) 60%, rgba(242,242,242,1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(242, 242, 242, 1) 60%, rgba(242, 242, 242, 1) 100%);
     padding: 43px 4% 56px 4%;
   }
 
   @media (min-width: 1280px) {
-    background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 28%, rgba(242,242,242,1) 28%, rgba(242,242,242,1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 28%, rgba(242, 242, 242, 1) 28%, rgba(242, 242, 242, 1) 100%);
     padding: 0;
     padding-bottom: 65px;
   }
@@ -133,7 +133,6 @@
 
     @media (min-width: 1280px) {
       grid-column: 1 / -1;
-      justify-self: center;
       padding: 0;
       width: 100%;
       justify-self: flex-start;

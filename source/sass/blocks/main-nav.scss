@@ -49,8 +49,8 @@
 .main-nav__toggle {
   width: 24px;
   height: 16px;
+
   @media (min-width: $tablet-screen) {
     display: none;
   }
 }
-
