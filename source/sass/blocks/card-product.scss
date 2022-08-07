@@ -1,45 +1,137 @@
-@use "my-vars" as *;
-
-
-.card-product {
-  padding-bottom: 25px;
-}
+@use "../abstract" as *;
 
 .card-product__link {
   text-decoration: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+
+  @include media(md) {
+    grid-template-columns: 1fr;
+    row-gap: 34px;
+  }
+
+  @include media(xl) {
+    row-gap: 46px;
+  }
+}
+
+.card-product__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  padding-bottom: 9px;
+  margin-bottom: 22px;
+
+  @include media(md) {
+    align-items: center;
+    margin-bottom: 33px;
+  }
+
+  @include media(xl) {
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    row-gap: 21px;
+  }
 }
 
 .card-product__title {
+  font-size: 16px;
+  line-height: 1.25;
   font-weight: inherit;
   color: $raisin-black;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 20px;
+  width: 54%;
+
+  @include media(md) {
+    font-size: 20px;
+    line-height: 1.2;
+    width: 63%;
+    text-align: center;
+  }
+
+  @include media(xl) {
+    width: 145px;
+  }
 }
 
 .card-product__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 19px;
 
-  &:not(:last-child) {
-    margin-bottom: 22px;
+  @include media(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @include media(xl) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 63px;
+  }
+}
+
+.card-product__specification-list {
+  width: 100%;
+  margin: 0;
+}
+
+.card-product__specification-item {
+  display: flex;
+  justify-content: space-between;
+
+  @include media(md) {
+    padding-bottom: 9px;
+    margin-bottom: 5px;
+  }
+
+  &:last-child {
+    @include media(md) {
+      margin: 0;
+    }
   }
 }
 
 .card-product__item {
-  padding: 11px 0 14px 0;
-  margin-bottom: 19px;
+  padding: 19px 0 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media(md) {
+    padding: 36px;
+    padding-bottom: 39px;
+    padding-top: 0;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(242, 242, 242, 1) 20%, rgba(242, 242, 242, 1) 100%);
+  }
+
+  @include media(xl) {
+    padding: 0 30px 40px 35px;
+  }
 }
 
-.card-product__specification,
-.card-product__value {
+.card-product__image {
+  align-self: center;
+  justify-self: center;
+}
+
+.card-product__specification-name,
+.card-product__specification-value {
   font-family: $arial;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   color: $dark-gray;
+
+  @include media(md) {
+    font-size: 16px;
+  }
 }
 
-.card-product__value {
+.card-product__specification-value {
   margin: 0;
 }

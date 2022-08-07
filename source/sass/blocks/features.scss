@@ -1,30 +1,107 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .features {
   font-family: $arial;
-  line-height: 18px;
-  padding: 0 20px 49px 20px;
+  line-height: 1.5;
+
+  @include media(md) {
+    padding-bottom: 47px;
+  }
+
+  @include media(xl) {
+    padding-bottom: 0;
+  }
 }
 
 .features__title {
   font-family: $oswald;
   font-size: 36px;
-  line-height: 40px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 40px;
+
+  @include media(md) {
+    font-size: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  counter-reset: features-item-counter;
+
+  @include media(md) {
+    grid-template-columns: repeat(2, 35%);
+    row-gap: 37px;
+    column-gap: 137px;
+  }
+
+  @include media(xl) {
+    grid-template-columns: 230px 246px 248px 250px;
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
-.features__item:not(:last-child) {
-  margin-bottom: 20px;
+.features__item {
+  padding-left: 80px;
+
+  @include media(md) {
+    padding: 0;
+    padding-top: 151px;
+    padding-bottom: 57px;
+  }
+}
+
+.features__counter {
+  @include media(md) {
+    position: relative;
+  }
+
+  &::after {
+    @include media(md) {
+      position: absolute;
+      counter-increment: features-item-counter;
+      content: counter(features-item-counter);
+      font-family: $oswald;
+      font-size: 280px;
+      line-height: 280px;
+      color: $gray;
+      z-index: -3;
+      bottom: 40px;
+      right: 24px;
+    }
+
+    @include media(xl) {
+      bottom: 0;
+      right: 6px;
+    }
+  }
+
+  &:nth-child(2)::after {
+    @include media(md) {
+      right: 2px;
+    }
+
+    @include media(xl) {
+      right: 1px;
+    }
+  }
+
+  &:nth-child(3)::after,
+  &:nth-child(4)::after {
+    @include media(md) {
+      right: 0;
+    }
+  }
 }
 
 .features__description {
   margin: 0;
+  color: $dark-gray;
 }

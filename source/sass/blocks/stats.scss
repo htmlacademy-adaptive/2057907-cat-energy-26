@@ -1,55 +1,161 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .stats {
   font-family: $oswald;
-  line-height: 20px;
+  line-height: 1.2;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 1) 100%);
-  padding: 25px 20px 40px 20px;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @include media(md) {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(242, 242, 242, 1) 60%, rgba(242, 242, 242, 1) 100%);
+    padding-top: 43px;
+    padding-bottom: 55px;
+  }
+
+  @include media(xl) {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 28%, rgba(242, 242, 242, 1) 28%, rgba(242, 242, 242, 1) 100%);
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
+}
+
+.stats__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include media(xl) {
+    position: relative;
+  }
 }
 
 .stats__title {
   font-size: 36px;
-  line-height: 40px;
   font-weight: 400;
   margin: 0;
   margin-bottom: 40px;
+
+  @include media(md) {
+    font-size: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: 1220px) {
+    width: 50%;
+    margin-bottom: 76px;
+    margin-top: 43px;
+  }
 }
 
 .stats__description {
   font-family: $arial;
-  line-height: 18px;
   color: $dark-gray;
   margin: 0;
   margin-bottom: 20px;
 
+  @include media(md) {
+    line-height: 1.5;
+    margin-bottom: 54px;
+  }
+
+  @include media(xl) {
+    width: 436px;
+    margin-bottom: 69px;
+    margin-top: 70px;
+  }
+
   &--font-size-s {
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 14px;
     text-transform: lowercase;
     margin: 0;
+
+    @include media(md) {
+      line-height: 1.5;
+      margin-bottom: 54px;
+    }
+
+    @include media(xl) {
+      margin: 0;
+      width: 100%;
+    }
   }
 }
 
 .stats__list {
   margin: 0;
   margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 44%);
+  column-gap: 32px;
+  text-align: center;
+
+  @include media(md) {
+    grid-template-columns: 23% 23% auto;
+    column-gap: 42px;
+  }
+
+  @include media(xl) {
+    grid-template-columns: 162px 162px;
+    width: 436px;
+    row-gap: 55px;
+    margin: 0;
+  }
 }
 
 .stats__number {
   font-size: 24px;
-  line-height: 24px;
   margin-bottom: 8px;
+
+  @include media(md) {
+    font-size: 30px;
+    margin-bottom: 11px;
+  }
 }
 
 .stats__item {
   text-transform: uppercase;
   padding-top: 15px;
 
-  &:last-child {
+  @include media(xl) {
+    padding: 15px 10px 0 10px;
+  }
+
+  &--geometry {
     padding-top: 20px;
+    grid-column: 1 / -1;
+
+    @include media(md) {
+      grid-column: auto;
+      justify-self: end;
+      text-align: end;
+    }
+
+    @include media(xl) {
+      grid-column: 1 / -1;
+      padding: 0;
+      width: 100%;
+      justify-self: flex-start;
+      display: flex;
+      column-gap: 63px;
+    }
   }
 }
 
-.comparison__controls {
-  margin-top: 15px;
+.stats__cost {
+  margin: 0;
+}
+
+.stats__spending,
+.stats__cost {
+  @include media(md) {
+    font-size: 20px;
+  }
+}
+
+.stats__comparison {
+  @include media(xl) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

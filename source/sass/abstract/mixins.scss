@@ -1,0 +1,20 @@
+$breakpoints: (
+    "md": 768,
+    "xl": 1280
+);
+
+@mixin media($point, $direction: "min") {
+  $breakpoint: $point;
+
+  @if map-has-key($breakpoints, $point) {
+    $breakpoint: map-get($breakpoints, $point);
+  }
+
+  @if ($direction == "max" ) {
+    $breakpoint: $breakpoint - 0.5;
+  }
+
+  @media (#{$direction}-width: #{$breakpoint}px) {
+    @content;
+  }
+}

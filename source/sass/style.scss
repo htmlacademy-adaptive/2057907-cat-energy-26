@@ -1,32 +1,32 @@
-// global vars
-@use "blocks/my-vars";
-
 // global styles:
 @use "fonts";
 @use "global";
 
+// util styles:
+@use "util";
+
 
 // style for BEM blocks:
-@use "blocks/button.scss";
-@use "blocks/main-header.scss";
-@use "blocks/main-nav.scss";
-@use "blocks/site-list.scss";
-@use "blocks/main-container.scss";
-@use "blocks/hero-section.scss";
-@use "blocks/advantages.scss";
-@use "blocks/features.scss";
-@use "blocks/stats.scss";
-@use "blocks/comparison.scss";
-@use "blocks/main-footer.scss";
-@use "blocks/cooperation.scss";
-@use "blocks/location.scss";
-@use "blocks/footer-contacts.scss";
-@use "blocks/social.scss";
-@use "blocks/program-select.scss";
-@use "blocks/card-product.scss";
-@use "blocks/catalog.scss";
-@use "blocks/gift-order.scss";
-@use "blocks/header-logo.scss";
-@use "blocks/more-products.scss";
-@use "blocks/program-form.scss";
-@use "blocks/sideline-products.scss";
+@use "blocks/button";
+@use "blocks/main-nav";
+@use "blocks/site-list";
+@use "blocks/main-container";
+@use "blocks/hero-section";
+@use "blocks/advantages";
+@use "blocks/features";
+@use "blocks/stats";
+@use "blocks/comparison";
+@use "blocks/main-footer";
+@use "blocks/cooperation";
+@use "blocks/location";
+@use "blocks/footer-contacts";
+@use "blocks/social";
+@use "blocks/program-select";
+@use "blocks/card-product";
+@use "blocks/catalog";
+@use "blocks/gift-order";
+@use "blocks/header-logo";
+@use "blocks/more-products";
+@use "blocks/program-form";
+@use "blocks/sideline-products";
+@use "blocks/visually-hidden"

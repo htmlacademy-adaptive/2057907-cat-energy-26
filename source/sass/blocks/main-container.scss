@@ -1,3 +1,37 @@
+@use "../abstract" as *;
+
 .main-container {
   width: 100%;
+}
+
+.main-container__advantages {
+  margin-bottom: 20px;
+
+  @include media(md) {
+    margin-bottom: 45px;
+  }
+
+  @include media(xl) {
+    margin: 0 auto;
+    margin-bottom: 71px;
+  }
+}
+
+.main-container__hero-section {
+  @include media(xl) {
+    margin-bottom: 82px;
+  }
+}
+
+.main-container__features {
+  margin-bottom: 49px;
+
+  @include media(md) {
+    margin-bottom: 43px;
+  }
+
+  @include media(xl) {
+    margin: 0 auto;
+    margin-bottom: 26px;
+  }
 }

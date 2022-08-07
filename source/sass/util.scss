@@ -1,0 +1,14 @@
+@use "abstract" as *;
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+
+  @include media(md) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

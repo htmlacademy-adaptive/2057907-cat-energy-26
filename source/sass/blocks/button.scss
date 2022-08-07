@@ -1,13 +1,25 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .button {
   font-family: $oswald;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.2;
+  padding: 7px 0;
   background-color: $green;
   text-transform: uppercase;
   text-decoration: none;
   border: none;
   color: $white;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+
+  @include media(md) {
+    font-size: 20px;
+  }
+
+  @include media(xl) {
+    width: 168px;
+  }
 }

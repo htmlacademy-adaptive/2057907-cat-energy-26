@@ -1,14 +1,68 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .site-list {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
   padding: 22px 0 24px 0;
+
+  @include media(md) {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 62%;
+    justify-content: space-between;
+  }
+
+  @include media(xl) {
+    width: calc(39% + 2px);
+  }
 }
 
-.site-list__item:not(:last-child) {
+.site-list__item {
   margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media(md) {
+    margin: 0;
+  }
+}
+
+.site-list__item--current {
+  position: relative;
+
+  &::after {
+    @include media(md) {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -10px;
+      background-color: $green;
+    }
+  }
+}
+
+.site-list__item--current-index-theme {
+  &::after {
+    @include media(xl) {
+      background-color: $white;
+    }
+  }
 }
 
 .site-list__link {
   text-decoration: none;
   color: inherit;
+}
+
+.site-list__link--text-color {
+  @include media(xl) {
+    color: $white;
+  }
 }

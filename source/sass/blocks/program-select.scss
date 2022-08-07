@@ -1,19 +1,38 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .program-select {
   font-family: $oswald;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.2;
   font-weight: 400;
-  padding: 27px 20px 32px 20px;
+  padding-top: 27px;
+  padding-bottom: 32px;
+
+  @include media(md) {
+    padding: 53px 70px 72px 70px;
+    font-size: 20px;
+  }
+
+  @include media(xl) {
+    padding: 45px 30px 82px 30px;
+  }
 }
 
 .program-select__title {
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1.2;
   font-weight: inherit;
   margin: 0;
   margin-bottom: 37px;
+
+  @include media(md) {
+    font-size: 60px;
+    margin-bottom: 54px;
+  }
+
+  @include media(xl) {
+    margin-bottom: 56px;
+  }
 }
 
 .program-select__description {
@@ -21,4 +40,10 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 39px;
+
+  @include media(md) {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 66px;
+  }
 }

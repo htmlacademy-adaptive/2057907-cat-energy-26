@@ -1,20 +1,54 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .footer-contacts {
-  padding: 39px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 39px;
+  padding-bottom: 22px;
+
+  @include media(md) {
+    padding-top: 58px;
+    padding-bottom: 55px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include media(xl) {
+    padding-top: 57px;
+    padding-bottom: 58px;
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .footer-contacts__logo-link {
   display: block;
   margin-bottom: 52px;
+
+  @include media(md) {
+    margin-bottom: 0;
+  }
 }
 
 .footer-contacts__copyright-link {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @include media(md) {
+    width: 163px;
+  }
 }
 
 .footer-contacts__copyright-title {
   font-size: 16px;
   line-height: 18px;
   color: $dark-gray;
+  margin-right: auto;
+}
+
+.footer-contacts__copyright-image {
+  margin-left: auto;
 }

@@ -1,46 +1,89 @@
-@use "my-vars" as *;
+@use "../abstract" as *;
 
 .advantages {
   font-family: $oswald;
   min-width: 280px;
-  padding: 0 20px 20px 20px;
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @include media(xl) {
+    flex-direction: row;
+    column-gap: 80px;
+  }
 }
 
 .advantages__item {
   background-color: $gray;
   padding: 20px;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @include media(md) {
+    padding: 77px 28px 53px 52px;
+  }
+
+  @include media(xl) {
+    width: 50%;
+    padding: 41px 51px 55px 52px;
   }
 }
 
 .advantages__title {
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.5;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 71px;
+
+  @include media(md) {
+    font-size: 36px;
+    padding: 0;
+    margin-bottom: 24px;
+  }
+
+  @include media(xl) {
+    margin-top: 36px;
+    margin-bottom: 77px;
+    padding-left: 162px;
+  }
 }
 
 .advantages__slogan {
   font-family: $arial;
   color: $dark-gray;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1.29;
   margin: 0;
   margin-bottom: 38px;
+
+  @include media(md) {
+    line-height: 1.5;
+    margin-bottom: 48px;
+    padding-right: calc(45% + 4px);
+    color: $black;
+  }
+
+  @include media(xl) {
+    padding: 0;
+    margin-bottom: 23px;
+  }
 }
 
 .advantages__link {
   text-decoration: none;
   color: $black;
   text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include media(md) {
+    font-size: 20px;
+  }
 }
