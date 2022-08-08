@@ -67,7 +67,8 @@
   &--font-size-s {
     font-size: 14px;
     text-transform: lowercase;
-    margin: 0;
+    margin: 0 auto;
+    width: 87px;
 
     @include media(md) {
       line-height: 1.5;
@@ -85,9 +86,9 @@
   margin: 0;
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 44%);
-  column-gap: 32px;
+  grid-template-columns: repeat(2, 124px);
   text-align: center;
+  justify-content: space-between;
 
   @include media(md) {
     grid-template-columns: 23% 23% auto;
@@ -104,7 +105,6 @@
 
 .stats__number {
   font-size: 24px;
-  margin-bottom: 8px;
 
   @include media(md) {
     font-size: 30px;
@@ -115,6 +115,7 @@
 .stats__item {
   text-transform: uppercase;
   padding-top: 15px;
+  position: relative;
 
   @include media(xl) {
     padding: 15px 10px 0 10px;
@@ -123,6 +124,9 @@
   &--geometry {
     padding-top: 20px;
     grid-column: 1 / -1;
+    display: flex;
+    margin: 0 auto;
+    column-gap: 5px;
 
     @include media(md) {
       grid-column: auto;
@@ -138,6 +142,16 @@
       display: flex;
       column-gap: 63px;
     }
+  }
+
+  &:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 56px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/decorative/weight-back-border.svg");
   }
 }
 

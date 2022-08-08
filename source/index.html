@@ -10,19 +10,22 @@
 
 <body class="page__body">
   <header class="main-header">
-    <nav class="main-nav container">
+    <nav class="main-nav main-nav--closed main-nav--nojs container">
       <div class="main-nav__wrapper">
         <a class="main-nav__link header-logo" href="index.html">
           <img class="header-logo__image-logo" src="img/header/logotype-phone-icon.svg" width="34" height="38"
             alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
+        </a>
+        <a class="main-nav__link header-logo" href="index.html" aria-hidden="true">
           <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
             aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
         </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
+          <span class="main-nav__burger"></span>
         </button>
       </div>
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list main-nav__list--closed site-list">
         <li class="site-list__item site-list__item--current site-list__item--current-index-theme">
           <a class="site-list__link site-list__link--text-color">
             Главная
@@ -126,15 +129,19 @@
           </div>
         </dl>
         <div class="stats__comparison comparison">
-          <img class="comparison__fat" src="img/content/cat-fat.png" width="280" height="232" alt="Толстый кот">
-          <div class="comparison__top">
-            <img class="comparison__top-img comparison__skinny" src="img/content/cat-skinny.png" width="280"
-              height="232" alt="Худой кот">
+          <div class="comparison__wrapper">
+            <img class="comparison__skinny" src="img/content/cat-skinny.png" width="280" height="232" alt="Толстый кот">
+            <div class="comparison__top">
+              <img class="comparison__top-img comparison__fat" src="img/content/cat-fat.png" width="280" height="232"
+                alt="Худой кот">
+            </div>
           </div>
           <div class="comparison__controls">
-            <button class="comparison__button button" type="button">Было</button>
-            <input class="comparison__input" type="range" min="0" max="100" value="50">
-            <button class="comparison__button button" type="button">Стало</button>
+            <button class="comparison__button button" type="button" data-value="0">Было</button>
+            <div class="comparison__range-wrapper">
+              <input class="comparison__input" type="range" min="0" max="100" value="50" id="range">
+            </div>
+            <button class="comparison__button button" type="button" data-value="100">Стало</button>
           </div>
         </div>
       </div>
@@ -184,6 +191,8 @@
       </a>
     </div>
   </footer>
+  <script src="js/header.js"></script>
+  <script src="js/comparison-cat.js"></script>
 </body>
 
 </html>

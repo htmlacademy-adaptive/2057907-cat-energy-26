@@ -50,6 +50,37 @@
 
 .features__item {
   padding-left: 80px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  position: relative;
+
+  &:first-child::before,
+  &:nth-child(2)::before,
+  &:nth-child(3)::before,
+  &:last-child::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 2px;
+  }
+
+  &:first-child::before {
+    background-image: url("../img/decorative/healthy-nutrients-icon.svg");
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/decorative/fast-cooking-icon.svg");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/decorative/mess-gears-icon.svg");
+  }
+
+  &:last-child::before {
+    background-image: url("../img/decorative/clock-icon.svg");
+  }
 
   @include media(md) {
     padding: 0;
@@ -104,4 +135,5 @@
 .features__description {
   margin: 0;
   color: $dark-gray;
+  min-height: 60px;
 }

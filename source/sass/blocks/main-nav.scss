@@ -32,6 +32,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 17.39px;
+  z-index: 3;
+
+  @include media(md) {
+    padding-bottom: 0;
+  }
 }
 
 .main-nav__link {
@@ -42,13 +48,105 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: absolute;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $platinum;
+    box-shadow: 0 73px 0 0 $platinum, 0 147px 0 0 $platinum;
+
+    @include media(md) {
+      content: none;
+    }
+  }
 }
 
 .main-nav__toggle {
+  display: block;
   width: 24px;
   height: 16px;
+  padding: 0;
+  border: none;
+  background-color: $white;
 
   @include media(md) {
     display: none;
   }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+
+.main-nav__burger {
+  position: relative;
+  display: block;
+  background-color: $black;
+  width: 24px;
+  height: 1.5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-nav__burger::before,
+.main-nav__burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: $black;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-nav__burger::before {
+  transform: translateY(-8px);
+}
+
+.main-nav__burger::after {
+  transform: translateY(8px);
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle {
+  display: block;
+
+  @include media(md) {
+    display: none;
+  }
+}
+
+.main-nav__list--closed {
+  top: -230px;
+  transition: top 0.3s ease-in-out;
+}
+
+.main-nav__list--opened {
+  display: flex;
+  top: 64px;
+  transition: top 0.3s ease-in-out;
+}
+
+.main-nav--opened .main-nav__burger {
+  width: 1px;
+  background-color: transparent;
+}
+
+.main-nav--opened .main-nav__burger::before {
+  height: 1px;
+  transform: rotate(45deg);
+}
+
+.main-nav--opened .main-nav__burger::after {
+  height: 1px;
+  transform: rotate(-45deg);
 }

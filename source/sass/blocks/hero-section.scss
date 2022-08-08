@@ -51,11 +51,12 @@
 
   @include media(md) {
     align-items: flex-start;
+    padding-left: 87px;
   }
 
   @include media(xl) {
     flex-wrap: wrap;
-    padding-left: 87px;
+    padding-left: 80px;
   }
 }
 
