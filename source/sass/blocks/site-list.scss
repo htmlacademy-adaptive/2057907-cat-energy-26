@@ -58,6 +58,14 @@
 .site-list__link {
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .site-list__link--text-color {

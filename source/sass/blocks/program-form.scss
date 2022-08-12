@@ -1,59 +1,65 @@
 @use "../abstract" as *;
 
-.program-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.program-form__text {
-  color: $dark-gray;
-  text-transform: uppercase;
-  margin-bottom: 13px;
+.program-form__label {
   display: flex;
   align-items: center;
-  width: 100%;
   column-gap: 13px;
-  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 14px;
+  position: relative;
 
   @include media(md) {
     margin-bottom: 20px;
   }
 
-  @include media(xl) {
-    width: 569px;
-    margin: 0;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--geometry {
     @include media(xl) {
-      width: 100%;
+      width: 46.69%;
+      margin: 0;
     }
   }
 }
 
+.program-form__text {
+  color: $dark-gray;
+  text-transform: uppercase;
+  max-width: 35%;
+}
+
 .program-form__field-control-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 45px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
 
   @include media(md) {
     margin-bottom: 71px;
   }
 
   @include media(xl) {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
     display: grid;
-    grid-template-columns: repeat(2, 569px);
-    grid-template-rows: repeat(3, 52px);
+    grid-template-columns: 569px 569px;
     column-gap: 80px;
     row-gap: 20px;
     margin-bottom: 69px;
   }
 }
 
-.program-form__contacts-owner-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 23px;
+.program-form__contacts-owner {
+  padding: 0;
+  margin: 0;
+  border: none;
+  margin-bottom: 23.57px;
+  position: relative;
 
   @include media(md) {
     margin-bottom: 65px;
@@ -63,16 +69,63 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 69px;
+    margin-bottom: 67px;
   }
 }
 
-.program-form__extra-food-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.program-form__icon {
+  content: "";
+  position: absolute;
+  background-color: $raisin-black;
+  mask-repeat: no-repeat;
+
+  &--email {
+    width: 20px;
+    height: 14.05px;
+    top: 16.05px;
+    right: 15px;
+    mask-image: url("../img/decorative/email-icon.svg");
+
+    @include media(md) {
+      width: 18px;
+      height: 13px;
+      top: 19px;
+      right: 19px;
+    }
+
+    @include media(xl) {
+      width: 17.74px;
+      height: 13px;
+      top: 19px;
+      right: 19.72px;
+    }
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+    top: 13.04px;
+    right: 13px;
+    mask-image: url("../img/decorative/phone-icon.svg");
+
+    @include media(md) {
+      width: 20px;
+      height: 20px;
+      top: 16px;
+      right: 17px;
+    }
+
+    @include media(xl) {
+      width: 19.15px;
+      height: 20px;
+      top: 15px;
+      right: 17.23px;
+    }
+  }
 }
 
 .program-form__field {
+  appearance: textfield;
   font-family: $oswald;
   font-size: 16px;
   line-height: 1.2;
@@ -80,6 +133,9 @@
   text-transform: uppercase;
   padding: 13px 0 14px 16px;
   width: 100%;
+  border: 1px solid $platinum-special;
+  height: 45px;
+
 
   @include media(md) {
     min-height: 52px;
@@ -87,11 +143,54 @@
     padding-left: 19px;
     font-size: 20px;
   }
+
+  &::placeholder {
+    color: $dark-gray;
+    opacity: 1;
+  }
+
+  &:hover {
+    border: 1px solid $chinese-silver;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus {
+    border: 2px solid $dark-gray;
+    border-radius: 0;
+  }
+
+  &:focus + .program-form__icon {
+    background-color: $green;
+  }
+
+  &:focus:invalid,
+  &:not(:placeholder-shown):not(:focus):invalid {
+    border: 2px solid $error-color;
+  }
+
+  &:focus:invalid + .program-form__icon,
+  &:not(:placeholder-shown):not(:focus):invalid + .program-form__icon {
+    background-color: $error-color;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  // &[type=number] {
+  //   -moz-appearance: textfield;
+  // }
 }
 
 .program-form__control-label {
   text-transform: uppercase;
   display: inline-block;
+
 
   &--font-color {
     color: $raisin-black;
@@ -101,31 +200,143 @@
 .program-form__subtitle {
   font-size: 24px;
   line-height: 1.2;
+  font-weight: 400;
+  padding: 0;
   margin: 0;
   margin-bottom: 35px;
-  width: 100%;
+  width: 207px;
 
   @include media(md) {
+    width: 591px;
     font-size: 36px;
     margin-bottom: 76px;
   }
 
   @include media(xl) {
-    width: 100%;
+    width: 580px;
+    padding-right: 40px;
   }
 
-  &--geometry {
+  &--comment-decorate {
     @include media(md) {
+      width: 232px;
+      margin-bottom: 76px;
+    }
+  }
+
+  &--food-decorate {
+    @include media(md) {
+      width: 261px;
       margin-bottom: 57px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 221px;
+    right: 0;
+    height: 2px;
+    background-color: $green;
+
+    @include media(md) {
+      top: 25px;
+      left: 623px;
+    }
+
+    @include media(xl) {
+      left: auto;
+      width: 53.5%;
+      max-width: 1113px;
+      right: 0;
+    }
+  }
+
+  &--comment-decorate::after {
+    left: 163px;
+
+    @include media(md) {
+      left: 289px;
+    }
+
+    @include media(xl) {
+      left: auto;
+      width: 77%;
+      max-width: 1113px;
+    }
+  }
+
+  &--food-decorate::after {
+    left: 184px;
+
+    @include media(md) {
+      left: 322px;
+    }
+
+    @include media(xl) {
+      left: auto;
+      width: 74%;
+      max-width: 1113px;
+    }
+  }
+
+  &::before {
+    @include media(md) {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      right: 97%;
+      height: 2px;
+      background-color: $green;
+    }
+
+    @include media(xl) {
+      right: auto;
+      width: 20px;
+    }
+
+    @include media(1440) {
+      width: 5%;
     }
   }
 }
 
+.program-form__contacts-owner-wrapper,
+.program-form__comment-wrapper,
+.program-form__food-wrapper {
+  @include media(md) {
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+
+  @include media(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.program-form__contacts-owner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 78px;
+
+  @include media(xl) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .program-form__comment-group {
-  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: relative;
+  margin-bottom: 22.75px;
 
   @include media(md) {
-    margin-bottom: 56px;
+    margin-bottom: 65px;
   }
 
   @include media(xl) {
@@ -142,11 +353,19 @@
   width: 100%;
   min-height: 174px;
   text-align: center;
+  border: 1px solid $platinum-special;
 
   @include media(md) {
     font-size: 20px;
     line-height: 1.5;
   }
+}
+
+.program-form__food-additive {
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: relative;
 }
 
 .program-form__legend {
@@ -165,13 +384,79 @@
 .program-form__list,
 .program-form__checkbox-list {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+}
+
+.program-form__control-wrapper {
+  position: relative;
+  width: 100%;
+
+  @include media(md) {
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+
+  @include media(xl) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.program-form__field-wrapper {
+  margin-bottom: 24px;
+
+  @include media(md) {
+    margin-bottom: 72px;
+    padding-left: 71px;
+    padding-right: 67px;
+  }
+
+  @include media(xl) {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .program-form__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding-top: 25.24px;
+  padding-bottom: 24.24px;
+
   @include media(md) {
-    padding: 25px 28px;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: 1px solid $platinum-special;
+    min-height: 196px;
+  }
+
+  @include media(xl) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $light-silver;
+
+    @include media (md) {
+      content: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
   }
 }
 
@@ -180,12 +465,14 @@
   grid-template-columns: 1fr;
   align-items: center;
   margin-bottom: 41px;
+  row-gap: 24px;
+  padding: 0;
 
   @include media(md) {
     grid-template-columns: repeat(2, 35%);
-    column-gap: 123px;
-    row-gap: 32px;
-    margin-bottom: 54px;
+    column-gap: 124px;
+    row-gap: 42px;
+    margin-bottom: 59px;
   }
 
   @include media(xl) {
@@ -196,13 +483,6 @@
 }
 
 .program-form__item {
-  margin-bottom: 13px;
-
-  @include media(md) {
-    min-height: 40px;
-    padding-left: 59px;
-  }
-
   &--geometry {
     @include media(md) {
       margin: 0;
@@ -211,20 +491,128 @@
 }
 
 .program-form__control-group {
-  padding-top: 36px;
-
-  &--geometry {
-    padding: 0;
-  }
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: relative;
+  margin-bottom: 26px;
 
   @include media(md) {
-    padding-top: 52px;
+    padding-left: 71px;
+    padding-right: 67px;
   }
 
   @include media(xl) {
     grid-row: 1 / -1;
     grid-column: 2 / -1;
     padding: 0;
+  }
+}
+
+.program-form__control {
+  padding-left: 46px;
+  position: relative;
+  display: flex;
+
+  @include media (md) {
+    padding-left: 87.89px;
+  }
+
+  &--geometry {
+    @include media(md) {
+      padding-left: 59px;
+    }
+  }
+
+  &:hover .program-form__control-mark {
+    border: 1px solid $gray-special;
+  }
+}
+
+.program-form__control-mark {
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $chinese-silver;
+
+  @include media(md) {
+    width: 40px;
+    height: 40px;
+    left: 27.97px;
+    top: -7px;
+  }
+
+  &--radio {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    @include media(md) {
+      left: 0;
+    }
+  }
+}
+
+.program-form__control-input {
+  &:checked + .program-form__control-mark--radio::before {
+    content: "";
+    position: absolute;
+    width: 13.5px;
+    height: 13.5px;
+    top: 7.5px;
+    left: 7.3px;
+    border-radius: 50%;
+    background-color: $green;
+
+    @include media(md) {
+      width: 18px;
+      height: 18px;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  &:checked + .program-form__control-mark--checkbox::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 14px;
+    top: 8.09px;
+    left: 6.25px;
+    background-image: url("../img/decorative/check-mark-icon.svg");
+
+    @include media(md) {
+      width: 24px;
+      height: 18.67px;
+      top: 11px;
+      left: 8px;
+      background-image: url("../img/decorative/check-mark-icon-xl.svg");
+    }
+  }
+
+  &:disabled + .program-form__control-mark,
+  &:disabled ~ .program-form__control-label {
+    opacity: 0.3;
+  }
+}
+
+.program-form__control-input:checked + .program-form__control-mark--checkbox::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  top: 8.09px;
+  left: 6.25px;
+  background-image: url("../img/decorative/check-mark-icon.svg");
+
+  @include media(md) {
+    width: 24px;
+    height: 18.67px;
+    top: 11px;
+    left: 8px;
+    background-image: url("../img/decorative/check-mark-icon-xl.svg");
   }
 }
 
@@ -251,9 +639,13 @@
     flex-direction: row;
     align-items: center;
     column-gap: 61px;
+    padding-left: 71px;
+    padding-right: 67px;
   }
 
   @include media(xl) {
     column-gap: 81px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }

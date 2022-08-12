@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll('.comparison__button');
 const rangeInput = document.querySelectorAll('.comparison__input')
 
 input.addEventListener('input', function(evt) {
-  const value = (100 - input.value) + '%';
+  const value = input.value + '%';
   comparison.style.setProperty('--comparison', value);
 })
 

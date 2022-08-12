@@ -6,10 +6,27 @@
 
   @include media(md) {
     padding-bottom: 47px;
+    position: relative;
   }
 
   @include media(xl) {
     padding-bottom: 0;
+  }
+
+  &::after {
+    @include media(md) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: $platinum;
+    }
+
+    @include media(xl) {
+      content: none;
+    }
   }
 }
 
@@ -36,7 +53,7 @@
   counter-reset: features-item-counter;
 
   @include media(md) {
-    grid-template-columns: repeat(2, 35%);
+    grid-template-columns: repeat(2, 35.16%);
     row-gap: 37px;
     column-gap: 137px;
   }
@@ -54,6 +71,12 @@
   padding-bottom: 4px;
   position: relative;
 
+  @include media(md) {
+    padding: 0;
+    padding-top: 151px;
+    padding-bottom: 57px;
+  }
+
   &:first-child::before,
   &:nth-child(2)::before,
   &:nth-child(3)::before,
@@ -64,6 +87,15 @@
     height: 60px;
     left: 0;
     top: 2px;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+
+    @include media (md) {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      background-size: 80px 80px;
+    }
   }
 
   &:first-child::before {
@@ -80,12 +112,6 @@
 
   &:last-child::before {
     background-image: url("../img/decorative/clock-icon.svg");
-  }
-
-  @include media(md) {
-    padding: 0;
-    padding-top: 151px;
-    padding-bottom: 57px;
   }
 }
 
@@ -104,7 +130,7 @@
       line-height: 280px;
       color: $gray;
       z-index: -3;
-      bottom: 40px;
+      bottom: 00;
       right: 24px;
     }
 
@@ -136,4 +162,12 @@
   margin: 0;
   color: $dark-gray;
   min-height: 60px;
+}
+
+.features__description br {
+  display: none;
+
+  @include media (md) {
+    display: block;
+  }
 }

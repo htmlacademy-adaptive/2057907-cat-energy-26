@@ -9,12 +9,29 @@
   padding-bottom: 32px;
 
   @include media(md) {
-    padding: 53px 70px 72px 70px;
     font-size: 20px;
+    padding-bottom: 72px;
+    padding-top: 63px;
   }
 
   @include media(xl) {
-    padding: 45px 30px 82px 30px;
+    padding-top: 41.52px;
+    padding-bottom: 82px;
+  }
+}
+
+.program-select__wrapper {
+  margin-bottom: 39px;
+
+  @include media(md) {
+    padding-left: 71px;
+    padding-right: 67px;
+    margin-bottom: 66px;
+  }
+
+  @include media(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -39,11 +56,9 @@
   font-size: 14px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 39px;
 
   @include media(md) {
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 66px;
   }
 }

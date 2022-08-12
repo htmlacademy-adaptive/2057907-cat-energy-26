@@ -38,6 +38,22 @@
     width: 50px;
     height: 53px;
     background-image: url("../img/decorative/weight-lose-cat-icon.svg");
+
+    @include media(md) {
+      top: 81px;
+      left: 65.81%;
+      width: 200px;
+      height: 211px;
+      background-size: 200px 211px;
+    }
+
+    @include media(xl) {
+      top: 41px;
+      left: 52px;
+      width: 100px;
+      height: 106px;
+      background-size: 100px 106px;
+    }
   }
 
   &:last-child::before {
@@ -46,6 +62,22 @@
     width: 67px;
     height: 50px;
     background-image: url("../img/decorative/weight-gain-cat-icon.svg");
+
+    @include media(md) {
+      top: 91px;
+      left: 58.19%;
+      width: 268px;
+      height: 200px;
+      background-size: 268px 200px;
+    }
+
+    @include media(xl) {
+      top: 47px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+      background-size: 134px 100px;
+    }
   }
 
   @include media(md) {
@@ -93,13 +125,17 @@
   position: relative;
 
   @include media(md) {
+    width: 57.85%;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 48px;
-    padding-right: calc(45% + 4px);
+    padding: 0;
+    padding-right: 20px;
     color: $black;
   }
 
   @include media(xl) {
+    width: 100%;
     padding: 0;
     margin-bottom: 23px;
   }
@@ -112,6 +148,10 @@
     right: 0;
     height: 1px;
     background-color: $light-silver;
+
+    @include media(md) {
+      content: none;
+    }
   }
 }
 
@@ -124,18 +164,45 @@
   padding-right: 48px;
   position: relative;
 
+  @include media(md) {
+    font-size: 20px;
+  }
+
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    width: 32px;
-    height: 10px;
-    right: 0;
-    top: 7px;
-    background-image: url("../img/decorative/arrow-icon.svg");
-    background-repeat: no-repeat;
   }
 
-  @include media(md) {
-    font-size: 20px;
+  &::before {
+    width: 18px;
+    height: 2px;
+    top: 13px;
+    right: 14px;
+    background-color: $black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::after {
+    width: 12px;
+    height: 9px;
+    top: 7px;
+    right: 0;
+    border: 7px solid transparent;
+    border-left: 8px solid $black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 26px;
+    right: 6px;
+  }
+
+  &:hover::after {
+    right: -8px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
