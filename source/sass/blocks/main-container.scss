@@ -24,14 +24,13 @@
 }
 
 .main-container__features {
-  margin-bottom: 49px;
+  margin-bottom: 8px;
 
   @include media(md) {
-    margin-bottom: 43px;
+    margin-bottom: 0;
   }
 
   @include media(xl) {
-    margin: 0 auto;
     margin-bottom: 26px;
   }
 }

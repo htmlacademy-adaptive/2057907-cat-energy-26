@@ -1,6 +1,7 @@
 @use "../abstract" as *;
 
 .footer-contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,8 +11,8 @@
   @include media(md) {
     padding-top: 58px;
     padding-bottom: 55px;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   @include media(xl) {
@@ -20,33 +21,82 @@
     width: 1220px;
     margin: 0 auto;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 98px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background-color: $light-silver;
+    box-shadow: 0 63px 0 0 $light-silver;
+
+    @include media(md) {
+      content: none;
+    }
+  }
 }
 
 .footer-contacts__logo-link {
   display: block;
-  margin-bottom: 52px;
+  margin-bottom: 32px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include media(md) {
     margin-bottom: 0;
   }
 }
 
+.footer-contacts__social {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
 .footer-contacts__copyright-link {
+  position: relative;
   text-decoration: none;
   display: flex;
   align-items: center;
   width: 100%;
 
+  &:hover .footer-contacts__copyright-title::after {
+    background-color: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include media(md) {
     width: 163px;
+    justify-self: flex-end;
   }
 }
 
 .footer-contacts__copyright-title {
+  margin: 0;
   font-size: 16px;
   line-height: 18px;
   color: $dark-gray;
-  margin-right: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -6px;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../img/footer/htmlacademy-logo.svg");
+    background-color: $granite-gray;
+  }
 }
 
 .footer-contacts__copyright-image {

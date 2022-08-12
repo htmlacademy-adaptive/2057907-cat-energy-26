@@ -33,11 +33,14 @@
   }
 }
 
+.catalog__title-wrapper {
+  margin-bottom: 41px;
+}
+
 .catalog__title {
   font-size: 36px;
   font-weight: inherit;
   margin: 0;
-  margin-bottom: 49px;
 
   @include media(md) {
     font-size: 60px;
@@ -46,17 +49,5 @@
 
   @include media(xl) {
     margin-bottom: 84px;
-  }
-}
-
-.catalog__sideline-products {
-  margin-bottom: 35px;
-
-  @include media(md) {
-    margin-bottom: 69px;
-  }
-
-  @include media(xl) {
-    margin: 0;
   }
 }

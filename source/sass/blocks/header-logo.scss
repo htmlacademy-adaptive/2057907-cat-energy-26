@@ -1,9 +1,4 @@
 .header-logo {
-  display: flex;
-  width: 100%;
   align-items: center;
-}
-
-.header-logo__text-logo {
-  margin: 0 auto;
+  justify-content: space-between;
 }

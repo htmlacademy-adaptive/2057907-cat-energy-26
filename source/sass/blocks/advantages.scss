@@ -21,7 +21,64 @@
 
 .advantages__item {
   background-color: $gray;
-  padding: 20px;
+  padding: 20px 20px 18px 20px;
+  position: relative;
+
+  &:first-child::before,
+  &:last-child::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+
+  &:first-child::before {
+    top: 21px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/decorative/weight-lose-cat-icon.svg");
+
+    @include media(md) {
+      top: 81px;
+      left: 65.81%;
+      width: 200px;
+      height: 211px;
+      background-size: 200px 211px;
+    }
+
+    @include media(xl) {
+      top: 41px;
+      left: 52px;
+      width: 100px;
+      height: 106px;
+      background-size: 100px 106px;
+    }
+  }
+
+  &:last-child::before {
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../img/decorative/weight-gain-cat-icon.svg");
+
+    @include media(md) {
+      top: 91px;
+      left: 58.19%;
+      width: 268px;
+      height: 200px;
+      background-size: 268px 200px;
+    }
+
+    @include media(xl) {
+      top: 47px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+      background-size: 134px 100px;
+    }
+  }
 
   @include media(md) {
     padding: 77px 28px 53px 52px;
@@ -40,7 +97,9 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
-  padding-left: 71px;
+  padding-left: 69px;
+  padding-top: 10px;
+  position: relative;
 
   @include media(md) {
     font-size: 36px;
@@ -58,21 +117,41 @@
 .advantages__slogan {
   font-family: $arial;
   color: $dark-gray;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.29;
   margin: 0;
-  margin-bottom: 38px;
+  padding-bottom: 23px;
+  margin-bottom: 15px;
+  position: relative;
 
   @include media(md) {
+    width: 57.85%;
+    font-size: 16px;
     line-height: 1.5;
     margin-bottom: 48px;
-    padding-right: calc(45% + 4px);
+    padding: 0;
+    padding-right: 20px;
     color: $black;
   }
 
   @include media(xl) {
+    width: 100%;
     padding: 0;
     margin-bottom: 23px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $light-silver;
+
+    @include media(md) {
+      content: none;
+    }
   }
 }
 
@@ -82,8 +161,48 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.5;
+  padding-right: 48px;
+  position: relative;
 
   @include media(md) {
     font-size: 20px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    width: 18px;
+    height: 2px;
+    top: 13px;
+    right: 14px;
+    background-color: $black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::after {
+    width: 12px;
+    height: 9px;
+    top: 7px;
+    right: 0;
+    border: 7px solid transparent;
+    border-left: 8px solid $black;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    width: 26px;
+    right: 6px;
+  }
+
+  &:hover::after {
+    right: -8px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

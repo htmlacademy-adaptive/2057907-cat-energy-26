@@ -22,4 +22,12 @@
   @include media(xl) {
     width: 168px;
   }
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:active {
+    color: rgba($color: $white, $alpha: 0.3);
+  }
 }

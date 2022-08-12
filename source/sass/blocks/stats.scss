@@ -8,13 +8,13 @@
   padding-bottom: 40px;
 
   @include media(md) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 60%, rgba(242, 242, 242, 1) 60%, rgba(242, 242, 242, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 686px, rgba(234, 234, 234, 1) 686px, rgba(234, 234, 234, 1) 100%);
     padding-top: 43px;
     padding-bottom: 55px;
   }
 
   @include media(xl) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 28%, rgba(242, 242, 242, 1) 28%, rgba(242, 242, 242, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 26%, rgba(242, 242, 242, 1) 26%, rgba(242, 242, 242, 1) 100%);
     padding-top: 0;
     padding-bottom: 75px;
   }
@@ -47,7 +47,7 @@
   }
 }
 
-.stats__description {
+.stats__slogan {
   font-family: $arial;
   color: $dark-gray;
   margin: 0;
@@ -63,20 +63,35 @@
     margin-bottom: 69px;
     margin-top: 70px;
   }
+}
 
-  &--font-size-s {
+.stats__description {
+  font-family: $arial;
+  color: $dark-gray;
+  font-size: 12px;
+  text-transform: lowercase;
+  margin: 0 auto;
+  width: 70.16%;
+  padding: 0 5px;
+  margin-top: -13px;
+  background-color: $bright-gray;
+
+  @include media(md) {
+    width: 70.37%;
     font-size: 14px;
-    text-transform: lowercase;
-    margin: 0;
+    line-height: 1.5;
+    margin-bottom: 54px;
+    background-color: $white;
+  }
 
+  @include media(xl) {
+    background-color: $gray;
+    margin-bottom: 0;
+  }
+
+  &--geometry {
     @include media(md) {
-      line-height: 1.5;
-      margin-bottom: 54px;
-    }
-
-    @include media(xl) {
-      margin: 0;
-      width: 100%;
+      width: 87.56%;
     }
   }
 }
@@ -85,18 +100,19 @@
   margin: 0;
   margin-bottom: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 44%);
-  column-gap: 32px;
+  grid-template-columns: repeat(2, 44.29%);
   text-align: center;
+  justify-content: space-between;
 
   @include media(md) {
     grid-template-columns: 23% 23% auto;
     column-gap: 42px;
+    margin-bottom: 99px;
   }
 
   @include media(xl) {
     grid-template-columns: 162px 162px;
-    width: 436px;
+    width: 366px;
     row-gap: 55px;
     margin: 0;
   }
@@ -104,33 +120,39 @@
 
 .stats__number {
   font-size: 24px;
-  margin-bottom: 8px;
+  padding-top: 13.61px;
+  padding-bottom: 13.6px;
+  border: 1px solid $chinese-silver;
+  border-radius: 3px;
+
 
   @include media(md) {
+    padding-top: 15px;
+    padding-bottom: 20px;
     font-size: 30px;
-    margin-bottom: 11px;
   }
 }
 
 .stats__item {
   text-transform: uppercase;
-  padding-top: 15px;
-
-  @include media(xl) {
-    padding: 15px 10px 0 10px;
-  }
 
   &--geometry {
     padding-top: 20px;
     grid-column: 1 / -1;
+    display: flex;
+    margin: 0 auto;
+    column-gap: 5px;
 
     @include media(md) {
+      flex-direction: column;
+      padding-top: 11px;
       grid-column: auto;
       justify-self: end;
       text-align: end;
     }
 
     @include media(xl) {
+      flex-direction: row;
       grid-column: 1 / -1;
       padding: 0;
       width: 100%;

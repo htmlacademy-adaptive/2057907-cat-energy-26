@@ -1,7 +1,7 @@
 @use "../abstract" as *;
 
 .more-products {
-  padding: 0;
+  padding: 20px;
   padding-top: 25px;
   padding-bottom: 25px;
   margin: 0;
@@ -14,11 +14,22 @@
     padding: 38px;
     padding-top: 0;
     justify-items: center;
-    align-items: flex-start;
+    align-items: flex-end;
+    border: 2px solid $gray;
   }
 
-  @include media(xl) {
-    padding: 51px 39px 41px 39px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $bright-gray-special;
+
+    @include media(md) {
+      content: none;
+    }
   }
 }
 
@@ -29,9 +40,10 @@
   margin-bottom: 8px;
   padding-top: 53px;
   width: 100%;
+  position: relative;
 
   @include media(md) {
-    padding-top: 109px;
+    padding-top: 161px;
     margin-bottom: 23px;
     width: 54%;
     line-height: 1.1;
@@ -40,6 +52,27 @@
   @include media(xl) {
     margin-bottom: 49px;
     width: 134px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 30px;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: $light-gray;
+
+    @include media(md) {
+      width: 60px;
+      top: 81px;
+    }
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(90deg);
   }
 }
 
@@ -63,4 +96,12 @@
 .more-products__button {
   background-color: $gray;
   color: $dark-gray;
+
+  &:hover {
+    background-color: $bright-gray-special;
+  }
+
+  &:active {
+    color: rgba($color: #000000, $alpha: 0.3);
+  }
 }

@@ -1,16 +1,28 @@
 @use "../abstract" as *;
 
+.sideline-products {
+  position: relative;
+}
+
+.sideline-products__table-gift-wrapper {
+  @include media(xl) {
+    display: flex;
+    column-gap: 79px;
+  }
+}
+
 .sideline-products__table {
   width: 100%;
+  margin-bottom: 35px;
 
   @include media(md) {
-    padding-left: 38px;
-    padding-right: 38px;
+    margin-bottom: 69px;
   }
 
   @include media(xl) {
     padding: 0;
     width: 896px;
+    margin-bottom: 0;
   }
 }
 
@@ -26,18 +38,39 @@
   justify-content: flex-start;
   padding-top: 13px;
   padding-bottom: 19px;
+  border-top: 1px solid $chinese-silver;
 
   @include media(md) {
     margin: 0;
+    padding: 38px;
     padding-top: 26px;
     padding-bottom: 28px;
+    row-gap: 25px;
+    border-left: 1px solid $chinese-silver;
+    border-right: 1px solid $chinese-silver;
   }
 
   @include media(xl) {
     padding-top: 15px;
     padding-bottom: 17px;
+    padding-left: 0;
+    padding-right: 0;
     align-items: center;
     justify-content: flex-start;
+    border: none;
+    border-top: 1px solid $chinese-silver;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $chinese-silver;
+  }
+}
+
+.sideline-products__title-wrapper {
+  margin-bottom: 36px;
+
+  @include media(md) {
+    margin-bottom: 80px;
   }
 }
 
@@ -46,17 +79,56 @@
   line-height: 1.2;
   font-weight: inherit;
   margin: 0;
-  margin-bottom: 36px;
+  width: 248px;
+  padding-right: 22px;
 
   @include media(md) {
+    width: 410px;
     font-size: 36px;
-    margin-bottom: 80px;
     padding-left: 36px;
   }
 
-  @include media(xl) {
-    padding: 0;
-    margin-bottom: 81px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16.84px;
+    left: 268px;
+    right: 0;
+    height: 2px;
+    background-color: $green;
+
+    @include media(md) {
+      top: 25px;
+      left: 444px;
+    }
+
+    @include media(xl) {
+      left: auto;
+      width: 63.5%;
+      max-width: 1113px;
+      right: 0;
+    }
+  }
+
+  &::before {
+    @include media(md) {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      right: 97%;
+      height: 2px;
+      background-color: $green;
+    }
+
+    @include media(xl) {
+      right: auto;
+      width: 20px;
+    }
+
+    @include media(1440) {
+      width: 5%;
+    }
   }
 }
 
@@ -71,6 +143,7 @@
 
   @include media(md) {
     width: fit-content;
+    margin-bottom: 0;
   }
 
   @include media(xl) {
@@ -127,9 +200,12 @@
   width: 100%;
   margin-top: 15px;
 
+  @include media(md) {
+    margin: 0;
+  }
+
   @include media(xl) {
     width: 244px;
-    margin: 0;
     padding: 0;
   }
 }
