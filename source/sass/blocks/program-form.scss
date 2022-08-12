@@ -598,24 +598,6 @@
   }
 }
 
-.program-form__control-input:checked + .program-form__control-mark--checkbox::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 14px;
-  top: 8.09px;
-  left: 6.25px;
-  background-image: url("../img/decorative/check-mark-icon.svg");
-
-  @include media(md) {
-    width: 24px;
-    height: 18.67px;
-    top: 11px;
-    left: 8px;
-    background-image: url("../img/decorative/check-mark-icon-xl.svg");
-  }
-}
-
 .program-form__button {
   margin-bottom: 21px;
 
