@@ -166,8 +166,7 @@
     background-color: $green;
   }
 
-  &:focus:invalid,
-  &:not(:placeholder-shown):not(:focus):invalid {
+  @include invalid-field {
     border: 2px solid $error-color;
   }
 
@@ -181,10 +180,6 @@
     appearance: none;
     margin: 0;
   }
-
-  // &[type=number] {
-  //   -moz-appearance: textfield;
-  // }
 }
 
 .program-form__control-label {

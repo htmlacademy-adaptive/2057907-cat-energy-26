@@ -18,3 +18,10 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin invalid-field {
+  &:focus:invalid,
+  &:not(:placeholder-shown):not(:focus):invalid {
+    @content;
+  }
+}
