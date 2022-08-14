@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>«Cat Energy» — интернет-магазин функционального питания для котов</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <base href="https://htmlacademy-adaptive.github.io/2057907-cat-energy-26/7/">
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <nav class="main-nav main-nav--closed main-nav--nojs container">
+      <div class="main-nav__wrapper">
+        <a class="main-nav__link header-logo" href="index.html">
+          <img class="header-logo__image-logo" src="img/header/logotype-phone-icon.svg" width="34" height="38"
+            alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
+        </a>
+        <a class="main-nav__link header-logo" href="index.html" aria-hidden="true">
+          <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
+            aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="main-nav__burger"></span>
+        </button>
+      </div>
+      <ul class="main-nav__list main-nav__list--closed site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="site-list__item site-list__item--current">
+          <a class="site-list__link">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="program-select">
+    <div class="program-select__wrapper container">
+      <h1 class="program-select__title">Подбор программы</h1>
+      <p class="program-select__description">Заполните анкету, и мы подберем<br>
+        программу питания для вашего кота</p>
+    </div>
+    <form class="program-form" action="https://echo.htmlacademy.ru/" method="post">
+      <div class="program-form__field-control-wrapper">
+        <h2 class="visually-hidden">Данные кота</h2>
+        <div class="program-form__field-wrapper container">
+          <label class="program-form__label">
+            <span class="program-form__text">Имя:*</span>
+            <input class="program-form__field" type="text" name="pet-name" placeholder="Барсик" minlength="2">
+          </label>
+          <label class="program-form__label">
+            <span class="program-form__text">Вес&nbsp;(кг):*</span>
+            <input class="program-form__field" type="number" name="pet-weight" placeholder="7" value="1" min="1"
+              max="16" required>
+          </label>
+          <label class="program-form__label">
+            <span class="program-form__text">Возраст&nbsp;(лет):</span>
+            <input class="program-form__field" type="number" name="pet-age" placeholder="7">
+          </label>
+        </div>
+        <div class="program-form__control-wrapper">
+          <ul class="program-form__list container">
+            <li class="program-form__item">
+              <label class="program-form__control">
+                <input class="visually-hidden program-form__control-input" type="radio" name="choose-program"
+                  value="lose-weight" checked>
+                <span class="program-form__control-mark program-form__control-mark--radio"></span>
+                <span class="program-form__control-label program-form__control-label--font-color">Похудение</span>
+              </label>
+            </li>
+            <li class="program-form__item">
+              <label class="program-form__control">
+                <input class="visually-hidden program-form__control-input" type="radio" name="choose-program"
+                  value="gain-weight">
+                <span class="program-form__control-mark program-form__control-mark--radio"></span>
+                <span class="program-form__control-label program-form__control-label--font-color">Набор массы</span>
+              </label>
+            </li>
+            <li class="program-form__item">
+              <label class="program-form__control">
+                <input class="visually-hidden program-form__control-input" type="radio" name="choose-program"
+                  value="need-advice">
+                <span class="program-form__control-mark program-form__control-mark--radio"></span>
+                <span class="program-form__control-label program-form__control-label--font-color">Не знаю (Нужен ваш
+                  совет)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="program-form__contacts-owner">
+        <div class="program-form__contacts-owner-wrapper container">
+          <h2 class="program-form__subtitle">Контактные данные (владельца кота)</h2>
+          <label class="program-form__label program-form__label--geometry">
+            <span class="program-form__text">E&#8209;mail:*</span>
+            <input class="program-form__field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <span class="program-form__icon program-form__icon--email"></span>
+          </label>
+          <label class="program-form__label program-form__label--geometry">
+            <span class="program-form__text">Телефон:*</span>
+            <input class="program-form__field" type="tel" name="phone" placeholder="8 (960) 900-60-90" minlength="11"
+              required>
+            <span class="program-form__icon program-form__icon--phone"></span>
+          </label>
+        </div>
+      </div>
+      <div class="program-form__comment-group">
+        <div class="program-form__comment-wrapper container">
+          <h2 class="program-form__subtitle program-form__subtitle--comment-decorate">Комментарий</h2>
+          <label class="program-form__text program-form__text--geometry">
+            <textarea class="program-form__comment-field" name="comment" id="program-form__comment" cols="30" rows="5"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="program-form__food-additive">
+        <div class="program-form__food-wrapper container">
+          <h2 class="program-form__subtitle program-form__subtitle--food-decorate">Дополнительно</h2>
+          <ul class="program-form__checkbox-list">
+            <li class="program-form__item program-form__item--geometry">
+              <label class="program-form__control program-form__control--geometry">
+                <input class="visually-hidden program-form__control-input" type="checkbox" name="sweetener" checked>
+                <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+                <span class="program-form__control-label">Cахарозаменитель</span>
+              </label>
+            </li>
+            <li class="program-form__item program-form__item--geometry">
+              <label class=" program-form__control program-form__control--geometry">
+                <input class="visually-hidden program-form__control-input" type="checkbox" name="fresh-water">
+                <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+                <span class="program-form__control-label">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="program-form__item program-form__item--geometry">
+              <label class=" program-form__control program-form__control--geometry">
+                <input class="visually-hidden program-form__control-input" type="checkbox" name="milk">
+                <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+                <span class="program-form__control-label">Молоко</span>
+              </label>
+            </li>
+            <li class="program-form__item program-form__item--geometry">
+              <label class=" program-form__control program-form__control--geometry">
+                <input class="visually-hidden program-form__control-input" type="checkbox" name="vitamins">
+                <span class="program-form__control-mark program-form__control-mark--checkbox"></span>
+                <span class="program-form__control-label">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="program-form__button-legend-wrapper container">
+        <button class="program-form__button button" type="submit">Отправить заявку</button>
+        <small class="program-form__legend">* — Обязательные поля</small>
+      </div>
+    </form>
+  </main>
+  <footer class="main-footer">
+    <section class="main-footer__cooperation cooperation">
+      <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+      <address class="cooperation__address">
+        <p class="cooperation__address-text">Ул. Большая Конюшенная, д. 19/8</p>
+        <p class="cooperation__address-text cooperation__address-text--geometry">Санкт-Петербург</p>
+      </address>
+    </section>
+    <div class="main-footer__location location">
+      <iframe class="location__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A95450451a50e191e02d00f00296c7e42715b26db23d44613b3393d2eed27c4d6&amp;source=constructor"
+        width="320" height="362"></iframe>
+    </div>
+    <div class="main-footer__footer-contacts footer-contacts container">
+      <a class="footer-contacts__logo-link" href="index.html">
+        <img src="img/footer/logotype-text.svg" width="128" height="24"
+          alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
+      </a>
+      <ul class="footer-contacts__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
+        </li>
+      </ul>
+      <a class="footer-contacts__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <p class="footer-contacts__copyright-title">HTML Academy</p>
+      </a>
+    </div>
+  </footer>
+  <script src="js/header.js"></script>
+</body>
+
+</html>
