@@ -77,10 +77,7 @@
     padding-bottom: 57px;
   }
 
-  &:first-child::before,
-  &:nth-child(2)::before,
-  &:nth-child(3)::before,
-  &:last-child::before {
+  &::before {
     content: "";
     position: absolute;
     width: 60px;
@@ -89,6 +86,7 @@
     top: 2px;
     background-repeat: no-repeat;
     background-size: 60px 60px;
+    background-image: url("../img/decorative/healthy-nutrients-icon.svg");
 
     @include media (md) {
       width: 80px;
@@ -98,19 +96,19 @@
     }
   }
 
-  &:first-child::before {
+  &--healthy-nutrients::before {
     background-image: url("../img/decorative/healthy-nutrients-icon.svg");
   }
 
-  &:nth-child(2)::before {
+  &--fast-cooking::before {
     background-image: url("../img/decorative/fast-cooking-icon.svg");
   }
 
-  &:nth-child(3)::before {
+  &--mess-gears::before {
     background-image: url("../img/decorative/mess-gears-icon.svg");
   }
 
-  &:last-child::before {
+  &--clock-icon::before {
     background-image: url("../img/decorative/clock-icon.svg");
   }
 }
