@@ -6,6 +6,10 @@
   <title>«Cat Energy» — интернет-магазин функционального питания для котов</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -13,10 +17,14 @@
     <nav class="main-nav main-nav--closed main-nav--nojs container">
       <div class="main-nav__wrapper">
         <a class="main-nav__link header-logo" href="index.html">
-          <img class="header-logo__image-logo" src="img/header/logotype-phone-icon.svg" width="34" height="38"
-            alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/header/logotype-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/header/logotype-tablet.svg">
+            <img class="header-logo__image-logo" src="img/header/logotype-phone-icon.svg"
+              alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
+          </picture>
         </a>
-        <a class="main-nav__link header-logo" href="index.html" aria-hidden="true">
+        <a class="main-nav__link header-logo header-logo--text" href="index.html" aria-hidden="true">
           <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
             aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
         </a>
@@ -49,8 +57,17 @@
       <div class="hero-section__wrapper container">
         <h1 class="hero-section__title">Функциональное <br> питание для котов</h1>
         <p class="hero-section__slogan">Занялся собой? Займись котом!</p>
-        <img class="hero-section__product-image" src="img/content/promo-product-cat-energy-pro.png" width="280"
-          height="270" alt="Продукт Cat Energy Pro со вкусом курицы, 500 грамм">
+        <div class="hero-section__product-image-wrapper">
+          <picture>
+            <source media="(min-width: 1280px)"
+              srcset="img/content/promo-product-cat-energy-pro-desktop.png 1x, img/content/promo-product-cat-energy-pro-desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/promo-product-cat-energy-pro-tablet.png 1x, img/content/promo-product-cat-energy-pro-tablet@2x.png 2x">
+            <img class="hero-section__product-image" src="img/content/promo-product-cat-energy-pro-phone.png"
+              srcset="img/content/promo-product-cat-energy-pro-phone@2x.png 2x"
+              alt="Продукт Cat Energy Pro со вкусом курицы, 500 грамм">
+          </picture>
+        </div>
         <a class="hero-section__button button" href="form.html">
           Подобрать программу
         </a>
@@ -131,10 +148,19 @@
         </dl>
         <div class="stats__comparison comparison">
           <figure class="comparison__wrapper">
-            <img class="comparison__skinny" src="img/content/cat-skinny.png" width="280" height="256" alt="Толстый кот">
+            <picture>
+              <source media="(min-width: 768px)"
+                srcset="img/content/cat-skinny-tablet-desktop.png 1x, img/content/cat-skinny-tablet-desktop@2x.png 2x">
+              <img class="comparison__skinny" src="img/content/cat-skinny-phone.png"
+                srcset="img/content/cat-skinny-phone@2x.png 2x" alt="Толстый кот">
+            </picture>
             <div class="comparison__top">
-              <img class="comparison__top-img comparison__fat" src="img/content/cat-fat.png" width="280" height="256"
-                alt="Худой кот">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="img/content/cat-fat-tablet-desktop.png 1x, img/content/cat-fat-tablet-desktop@2x.png 2x">
+                <img class="comparison__top-img comparison__fat" src="img/content/cat-fat-phone.png"
+                  srcset="img/content/cat-fat-phone@2x.png 2x" alt="Худой кот">
+              </picture>
             </div>
             <div class="comparison__range-wrapper">
               <input class="comparison__input" type="range" min="0" max="100" value="50" id="range">
@@ -154,8 +180,7 @@
       </address>
     </section>
     <div class="main-footer__location location">
-      <iframe class="location__map" src="https://yandex.ru/map-widget/v1/-/CCURB8GwoB" width="320"
-        height="362"></iframe>
+      <iframe class="location__map" src="https://yandex.ru/map-widget/v1/-/CCURB8GwoB"></iframe>
     </div>
     <div class="main-footer__footer-contacts footer-contacts container">
       <a class="footer-contacts__logo-link" href="index.html">

@@ -1,4 +1,9 @@
+@use "../abstract/" as *;
+
 .header-logo {
-  align-items: center;
-  justify-content: space-between;
+  &--text {
+    @include media(md) {
+      display: none;
+    }
+  }
 }
