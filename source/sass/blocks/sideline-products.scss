@@ -2,6 +2,20 @@
 
 .sideline-products {
   position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 16.5px;
+    height: 2px;
+    background-color: $green;
+
+    @include media(md) {
+      top: 26px;
+    }
+  }
 }
 
 .sideline-products__table-gift-wrapper {
@@ -79,56 +93,24 @@
   line-height: 1.2;
   font-weight: inherit;
   margin: 0;
-  width: 248px;
+  width: fit-content;
   padding-right: 22px;
+  padding-left: 20px;
+  margin-left: -20px;
+  background-color: $white;
+  position: relative;
 
   @include media(md) {
-    width: 410px;
     font-size: 36px;
     padding-left: 36px;
+    margin-left: 0;
+    padding-right: 36px;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 16.84px;
-    left: 268px;
-    right: 0;
-    height: 2px;
-    background-color: $green;
-
-    @include media(md) {
-      top: 25px;
-      left: 444px;
-    }
-
-    @include media(xl) {
-      left: auto;
-      width: 63.5%;
-      max-width: 1113px;
-      right: 0;
-    }
-  }
-
-  &::before {
-    @include media(md) {
-      content: "";
-      position: absolute;
-      top: 25px;
-      left: 0;
-      right: 97%;
-      height: 2px;
-      background-color: $green;
-    }
-
-    @include media(xl) {
-      right: auto;
-      width: 20px;
-    }
-
-    @include media(1440) {
-      width: 5%;
-    }
+  @include media(xl) {
+    padding-left: 40px;
+    margin-left: -40px;
+    padding-right: 35px;
   }
 }
 

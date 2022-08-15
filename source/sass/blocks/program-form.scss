@@ -1,5 +1,13 @@
 @use "../abstract" as *;
 
+.program-form__label-wrapper {
+
+  @include media(xl) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .program-form__label {
   display: flex;
   align-items: center;
@@ -28,6 +36,13 @@
   color: $dark-gray;
   text-transform: uppercase;
   max-width: 35%;
+
+  &--geometry {
+    max-width: 100%;
+    width: 100%;
+    min-height: fit-content;
+    display: block;
+  }
 }
 
 .program-form__field-control-wrapper {
@@ -63,13 +78,32 @@
 
   @include media(md) {
     margin-bottom: 65px;
+    padding-left: 0;
   }
 
   @include media(xl) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 67px;
+  }
+}
+
+.program-form__contacts-owner,
+.program-form__comment-group,
+.program-form__food-additive {
+  @include media(xl) {
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    top: 18px;
+    background-color: $green;
+
+    @include media(md) {
+      top: 26px;
+    }
   }
 }
 
@@ -197,103 +231,47 @@
   line-height: 1.2;
   font-weight: 400;
   padding: 0;
+  padding-right: 14px;
   margin: 0;
   margin-bottom: 35px;
-  width: 207px;
+  width: 201px;
+  background-color: $white;
+  position: relative;
+  padding-left: 20px;
+  margin-left: -20px;
 
   @include media(md) {
-    width: 591px;
     font-size: 36px;
     margin-bottom: 76px;
+    padding-left: 39px;
+    margin-left: -39px;
+    padding-right: 42px;
+    width: fit-content;
   }
 
   @include media(xl) {
-    width: 580px;
     padding-right: 40px;
+    padding-left: 40px;
+    margin-left: -40px;
   }
 
   &--comment-decorate {
+    width: fit-content;
+    padding-right: 22px;
+
     @include media(md) {
-      width: 232px;
       margin-bottom: 76px;
+      padding-right: 38px;
     }
   }
 
   &--food-decorate {
+    width: fit-content;
+    padding-right: 23px;
+
     @include media(md) {
-      width: 261px;
       margin-bottom: 57px;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 18px;
-    left: 221px;
-    right: 0;
-    height: 2px;
-    background-color: $green;
-
-    @include media(md) {
-      top: 25px;
-      left: 623px;
-    }
-
-    @include media(xl) {
-      left: auto;
-      width: 53.5%;
-      max-width: 1113px;
-      right: 0;
-    }
-  }
-
-  &--comment-decorate::after {
-    left: 163px;
-
-    @include media(md) {
-      left: 289px;
-    }
-
-    @include media(xl) {
-      left: auto;
-      width: 77%;
-      max-width: 1113px;
-    }
-  }
-
-  &--food-decorate::after {
-    left: 184px;
-
-    @include media(md) {
-      left: 322px;
-    }
-
-    @include media(xl) {
-      left: auto;
-      width: 74%;
-      max-width: 1113px;
-    }
-  }
-
-  &::before {
-    @include media(md) {
-      content: "";
-      position: absolute;
-      top: 25px;
-      left: 0;
-      right: 97%;
-      height: 2px;
-      background-color: $green;
-    }
-
-    @include media(xl) {
-      right: auto;
-      width: 20px;
-    }
-
-    @include media(1440) {
-      width: 5%;
+      padding-right: 41px;
     }
   }
 }
@@ -301,6 +279,8 @@
 .program-form__contacts-owner-wrapper,
 .program-form__comment-wrapper,
 .program-form__food-wrapper {
+  position: relative;
+
   @include media(md) {
     padding-left: 71px;
     padding-right: 67px;
@@ -313,14 +293,7 @@
 }
 
 .program-form__contacts-owner-wrapper {
-  display: flex;
-  flex-wrap: wrap;
   column-gap: 78px;
-
-  @include media(xl) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 .program-form__comment-group {
@@ -332,6 +305,7 @@
 
   @include media(md) {
     margin-bottom: 65px;
+    padding-left: 0;
   }
 
   @include media(xl) {
@@ -361,6 +335,10 @@
   margin: 0;
   border: none;
   position: relative;
+
+  @include media(md) {
+    padding-left: 0;
+  }
 }
 
 .program-form__legend {

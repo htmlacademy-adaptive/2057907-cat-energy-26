@@ -27,10 +27,11 @@
         <a class="main-nav__link header-logo header-logo--text" href="index.html" aria-hidden="true">
           <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
             aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="main-nav__burger"></span>
-          </button>
+        </a>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="main-nav__burger"></span>
+        </button>
       </div>
       <ul class="main-nav__list main-nav__list--closed site-list">
         <li class="site-list__item">
@@ -108,17 +109,19 @@
       <div class="program-form__contacts-owner">
         <div class="program-form__contacts-owner-wrapper container">
           <h2 class="program-form__subtitle">Контактные данные (владельца кота)</h2>
-          <label class="program-form__label program-form__label--geometry">
-            <span class="program-form__text">E&#8209;mail:*</span>
-            <input class="program-form__field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            <span class="program-form__icon program-form__icon--email"></span>
-          </label>
-          <label class="program-form__label program-form__label--geometry">
-            <span class="program-form__text">Телефон:*</span>
-            <input class="program-form__field" type="tel" name="phone" placeholder="8 (960) 900-60-90" minlength="11"
-              required>
-            <span class="program-form__icon program-form__icon--phone"></span>
-          </label>
+          <div class="program-form__label-wrapper">
+            <label class="program-form__label program-form__label--geometry">
+              <span class="program-form__text">E&#8209;mail:*</span>
+              <input class="program-form__field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <span class="program-form__icon program-form__icon--email"></span>
+            </label>
+            <label class="program-form__label program-form__label--geometry">
+              <span class="program-form__text">Телефон:*</span>
+              <input class="program-form__field" type="tel" name="phone" placeholder="8 (960) 900-60-90" minlength="11"
+                required>
+              <span class="program-form__icon program-form__icon--phone"></span>
+            </label>
+          </div>
         </div>
       </div>
       <div class="program-form__comment-group">
