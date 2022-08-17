@@ -24,7 +24,7 @@
               alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
           </picture>
         </a>
-        <a class="main-nav__link header-logo header-logo--text" href="index.html" aria-hidden="true">
+        <a class="main-nav__link header-logo header-logo--text" href="index.html">
           <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
             aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
         </a>
@@ -68,8 +68,8 @@
           </label>
           <label class="program-form__label">
             <span class="program-form__text">Вес&nbsp;(кг):*</span>
-            <input class="program-form__field" type="number" name="pet-weight" placeholder="7" value="1" min="1"
-              max="16" required>
+            <input class="program-form__field" type="number" name="pet-weight" placeholder="7" min="1" max="16"
+              required>
           </label>
           <label class="program-form__label">
             <span class="program-form__text">Возраст&nbsp;(лет):</span>
@@ -112,13 +112,14 @@
           <div class="program-form__label-wrapper">
             <label class="program-form__label program-form__label--geometry">
               <span class="program-form__text">E&#8209;mail:*</span>
-              <input class="program-form__field" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="program-form__field program-form__field--geometry" type="email" name="email"
+                placeholder="kuklachev@gmail.com" required>
               <span class="program-form__icon program-form__icon--email"></span>
             </label>
-            <label class="program-form__label program-form__label--geometry">
+            <label class="program-form__label program-form__label--geometry program-form__label--phone-special">
               <span class="program-form__text">Телефон:*</span>
-              <input class="program-form__field" type="tel" name="phone" placeholder="8 (960) 900-60-90" minlength="11"
-                required>
+              <input class="program-form__field program-form__field--geometry" type="tel" name="phone"
+                placeholder="8 (960) 900-60-90" minlength="11" required>
               <span class="program-form__icon program-form__icon--phone"></span>
             </label>
           </div>
@@ -175,19 +176,17 @@
     </form>
   </main>
   <footer class="main-footer">
-    <section class="main-footer__cooperation cooperation">
-      <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+    <section class="main-footer__cooperation main-footer__cooperation--form-page cooperation">
+      <h2 class="cooperation__title">Приглашаем <br> к сотрудничеству дилеров!</h2>
       <address class="cooperation__address">
         <p class="cooperation__address-text">Ул. Большая Конюшенная, д. 19/8</p>
         <p class="cooperation__address-text cooperation__address-text--geometry">Санкт-Петербург</p>
       </address>
     </section>
     <div class="main-footer__location location">
-      <iframe class="location__map"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A95450451a50e191e02d00f00296c7e42715b26db23d44613b3393d2eed27c4d6&amp;source=constructor"
-        width="320" height="362"></iframe>
+      <iframe class="location__map" src="https://yandex.ru/map-widget/v1/-/CCURB8GwoB"></iframe>
     </div>
-    <div class="main-footer__footer-contacts footer-contacts container">
+    <div class="main-footer__footer-contacts footer-contacts footer-contacts--form-page container">
       <a class="footer-contacts__logo-link" href="index.html">
         <img src="img/footer/logotype-text.svg" width="128" height="24"
           alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">

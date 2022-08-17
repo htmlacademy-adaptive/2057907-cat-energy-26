@@ -27,10 +27,10 @@
 
 .sideline-products__table {
   width: 100%;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   @include media(md) {
-    margin-bottom: 69px;
+    margin-bottom: 66px;
   }
 
   @include media(xl) {
@@ -50,22 +50,23 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding-top: 13px;
-  padding-bottom: 19px;
+  padding-top: 12px;
+  padding-bottom: 16px;
   border-top: 1px solid $chinese-silver;
 
   @include media(md) {
     margin: 0;
-    padding: 38px;
-    padding-top: 26px;
-    padding-bottom: 28px;
-    row-gap: 25px;
+    padding: 36px;
+    padding-top: 23px;
+    padding-bottom: 27px;
+    row-gap: 22px;
     border-left: 1px solid $chinese-silver;
     border-right: 1px solid $chinese-silver;
+    align-items: flex-end;
   }
 
   @include media(xl) {
-    padding-top: 15px;
+    padding-top: 14px;
     padding-bottom: 17px;
     padding-left: 0;
     padding-right: 0;
@@ -81,10 +82,10 @@
 }
 
 .sideline-products__title-wrapper {
-  margin-bottom: 36px;
+  margin-bottom: 29px;
 
   @include media(md) {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
   }
 }
 
@@ -121,7 +122,8 @@
   color: $raisin-black;
   width: 100%;
   text-align: start;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
+  padding: 0;
 
   @include media(md) {
     width: fit-content;
@@ -141,18 +143,27 @@
   font-size: 14px;
   line-height: 1.25;
   color: $dark-gray;
+  padding: 0;
 
   @include media(md) {
     font-size: 16px;
     margin-left: auto;
+    vertical-align: bottom;
   }
 
   @include media(xl) {
     margin: 0;
+    padding-top: 10px;
   }
 }
 
 .sideline-products__food-number {
+  margin-left: -2px;
+
+  @include media(md) {
+    margin-left: auto;
+  }
+
   @include media(xl) {
     width: 223px;
     margin-right: 20px;
@@ -180,7 +191,7 @@
 .sideline-products__order {
   display: flex;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 12px;
 
   @include media(md) {
     margin: 0;
@@ -194,10 +205,14 @@
 
 .sideline-products__button {
   margin: 0 auto;
+  min-height: 40px;
+
+  @include media(md) {
+    font-size: 16px;
+  }
 
   @include media(xl) {
     margin: 0;
-    font-size: 16px;
     width: 244px;
     min-height: 40px;
   }

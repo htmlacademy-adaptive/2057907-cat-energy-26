@@ -2,10 +2,11 @@
 
 .features {
   font-family: $arial;
-  line-height: 1.5;
+  line-height: 1.45;
+  padding-bottom: 48px;
 
   @include media(md) {
-    padding-bottom: 47px;
+    padding-bottom: 46px;
     position: relative;
   }
 
@@ -35,11 +36,11 @@
   font-size: 36px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 
   @include media(md) {
     font-size: 60px;
-    margin-bottom: 32px;
+    margin-bottom: 21px;
   }
 }
 
@@ -54,12 +55,12 @@
 
   @include media(md) {
     grid-template-columns: repeat(2, 35.16%);
-    row-gap: 37px;
+    row-gap: 41px;
     column-gap: 137px;
   }
 
   @include media(xl) {
-    grid-template-columns: 230px 246px 248px 250px;
+    grid-template-columns: 242px 244px 243px 245px;
     justify-content: space-between;
     gap: 0;
   }
@@ -67,8 +68,6 @@
 
 .features__item {
   padding-left: 80px;
-  padding-top: 2px;
-  padding-bottom: 4px;
   position: relative;
 
   @include media(md) {
@@ -91,7 +90,7 @@
     @include media (md) {
       width: 80px;
       height: 80px;
-      top: 40px;
+      top: 38px;
       background-size: 80px 80px;
     }
   }
@@ -134,7 +133,7 @@
 
     @include media(xl) {
       bottom: 0;
-      right: 6px;
+      right: 18px;
     }
   }
 

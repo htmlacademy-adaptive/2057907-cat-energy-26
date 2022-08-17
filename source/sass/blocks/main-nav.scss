@@ -18,14 +18,15 @@
     font-size: 18px;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 38px;
+    padding-top: 24px;
     padding-bottom: 12px;
     align-items: center;
   }
 
   @include media(xl) {
-    padding-top: 69px;
-    padding-bottom: 32px;
+    font-size: 20px;
+    padding-top: 53px;
+    padding-bottom: 22px;
   }
 
   &::after {
@@ -47,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 17.39px;
+  padding-bottom: 13.39px;
   z-index: 3;
 
   @include media(md) {

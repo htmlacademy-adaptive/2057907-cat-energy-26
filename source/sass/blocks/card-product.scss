@@ -5,16 +5,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   @include media(md) {
     grid-template-columns: 1fr;
-    row-gap: 34px;
+    row-gap: 31px;
     margin-bottom: 0;
   }
 
   @include media(xl) {
-    row-gap: 46px;
+    row-gap: 42px;
   }
 }
 
@@ -27,15 +27,15 @@
   @include media(md) {
     align-items: center;
     margin-bottom: 33px;
-    row-gap: 21px;
     padding: 0;
   }
 
   @include media(xl) {
     padding: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    row-gap: 21px;
+    padding-left: 6px;
+    padding-right: 4px;
+    row-gap: 18px;
+    margin-bottom: 32px;
   }
 }
 
@@ -72,13 +72,14 @@
     padding-right: 30px;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+    row-gap: 67px;
   }
 
   @include media(xl) {
     margin: 0 auto;
     grid-template-columns: repeat(4, 245px);
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 66px;
   }
 }
 
@@ -92,7 +93,7 @@
   justify-content: space-between;
 
   @include media(md) {
-    padding-bottom: 9px;
+    padding-bottom: 5px;
     margin-bottom: 5px;
     border-bottom: 1px solid $chinese-silver;
   }
@@ -105,7 +106,7 @@
 }
 
 .card-product__item {
-  padding: 19px 20px 25px 20px;
+  padding: 19px 20px 24px 20px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -115,12 +116,13 @@
     padding: 37px;
     padding-bottom: 39px;
     padding-top: 0;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 81px, rgba(242, 242, 242, 1) 81px, rgba(242, 242, 242, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 74px, rgba(242, 242, 242, 1) 74px, rgba(242, 242, 242, 1) 100%);
     border: none;
   }
 
   @include media(xl) {
-    padding: 0 30px 40px 35px;
+    padding: 0 34px 40px 35px;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 76px, rgba(242, 242, 242, 1) 76px, rgba(242, 242, 242, 1) 100%);
   }
 }
 
@@ -128,6 +130,11 @@
   margin: 0;
   align-self: center;
   justify-self: center;
+
+  @include media(xl) {
+    width: 172px;
+    height: 196px;
+  }
 }
 
 .card-product__specification-name,
@@ -144,4 +151,13 @@
 
 .card-product__specification-value {
   margin: 0;
+}
+
+.card-product__button {
+  padding: 10px 0;
+  min-height: 40px;
+
+  @include media(md) {
+    font-size: 16px;
+  }
 }

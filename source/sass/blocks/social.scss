@@ -3,8 +3,8 @@
 .social {
   list-style-type: none;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 21px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -15,6 +15,11 @@
     margin-bottom: 0;
     padding: 0;
     justify-self: center;
+    margin-left: -10px;
+  }
+
+  @include media(xl) {
+    align-self: flex-start;
   }
 }
 

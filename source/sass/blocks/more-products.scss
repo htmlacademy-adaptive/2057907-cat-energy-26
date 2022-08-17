@@ -13,21 +13,31 @@
   @include media(md) {
     background-image: none;
     padding: 38px;
-    padding-top: 81px;
+    padding-top: 75px;
+    padding-bottom: 39px;
     justify-items: center;
     align-items: flex-end;
     border: none;
+  }
+
+  @include media(xl) {
+    padding-top: 75px;
+    padding-bottom: 40px;
   }
 
   &::before {
     @include media(md) {
       content: "";
       position: absolute;
-      top: 81px;
+      top: 76px;
       left: 0;
       right: 0;
       bottom: 0;
       border: 2px solid $gray;
+    }
+
+    @include media(xl) {
+      top: 77px;
     }
   }
 }
@@ -49,8 +59,8 @@
   }
 
   @include media(xl) {
-    margin-bottom: 49px;
-    width: 134px;
+    margin-bottom: 22px;
+    width: 100%;
   }
 
   &::after,
@@ -90,11 +100,16 @@
     margin-bottom: 87px;
     width: 68%;
   }
+
+  @include media(xl) {
+    width: 100%;
+  }
 }
 
 .more-products__button {
   background-color: $gray;
   color: $dark-gray;
+  font-size: 16px;
 
   &:hover {
     background-color: $bright-gray-special;

@@ -29,6 +29,10 @@
   @include media(md) {
     padding: 0;
   }
+
+  &--geometry {
+    margin-left: -8px;
+  }
 }
 
 .site-list__item--current {
