@@ -2,10 +2,11 @@
 
 .features {
   font-family: $arial;
-  line-height: 1.45;
+  line-height: 1.3;
   padding-bottom: 48px;
 
   @include media(md) {
+    line-height: 1.46;
     padding-bottom: 46px;
     position: relative;
   }
@@ -36,11 +37,15 @@
   font-size: 36px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 39px;
 
   @include media(md) {
     font-size: 60px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
+  }
+
+  @include media(xl) {
+    margin-bottom: 19px;
   }
 }
 
@@ -55,8 +60,8 @@
 
   @include media(md) {
     grid-template-columns: repeat(2, 35.16%);
-    row-gap: 41px;
-    column-gap: 137px;
+    row-gap: 39px;
+    column-gap: 135px;
   }
 
   @include media(xl) {
@@ -81,11 +86,11 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    left: 0;
-    top: 2px;
+    left: 1px;
+    top: -2px;
     background-repeat: no-repeat;
     background-size: 60px 60px;
-    background-image: url("../img/decorative/healthy-nutrients-icon.svg");
+    background-image: url("../img/sprite.svg#healthy-nutrients-icon");
 
     @include media (md) {
       width: 80px;
@@ -96,19 +101,19 @@
   }
 
   &--healthy-nutrients::before {
-    background-image: url("../img/decorative/healthy-nutrients-icon.svg");
+    background-image: url("../img/sprite.svg#healthy-nutrients-icon");
   }
 
   &--fast-cooking::before {
-    background-image: url("../img/decorative/fast-cooking-icon.svg");
+    background-image: url("../img/sprite.svg#fast-cooking-icon");
   }
 
   &--mess-gears::before {
-    background-image: url("../img/decorative/mess-gears-icon.svg");
+    background-image: url("../img/sprite.svg#mess-gears-icon");
   }
 
   &--clock-icon::before {
-    background-image: url("../img/decorative/clock-icon.svg");
+    background-image: url("../img/sprite.svg#clock-icon");
   }
 }
 

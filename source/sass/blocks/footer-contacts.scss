@@ -25,6 +25,8 @@
   }
 
   &--form-page {
+    padding-top: 38px;
+
     @include media(md) {
       padding-top: 61px;
     }
@@ -79,7 +81,7 @@
 
 .footer-contacts__social {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 20px;
 }
 
 .footer-contacts__copyright-link {
@@ -89,8 +91,8 @@
   align-items: center;
   width: 100%;
 
-  &:hover .footer-contacts__copyright-title::after {
-    background-color: $green;
+  &:hover .footer-contacts__copyright-logo {
+    color: $green;
   }
 
   &:active {
@@ -108,19 +110,9 @@
   font-size: 16px;
   line-height: 18px;
   color: $dark-gray;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -6px;
-    width: 27px;
-    height: 34px;
-    mask-image: url("../img/footer/htmlacademy-logo.svg");
-    background-color: $granite-gray;
-  }
 }
 
-.footer-contacts__copyright-image {
+.footer-contacts__copyright-logo {
   margin-left: auto;
+  color: $granite-gray;
 }

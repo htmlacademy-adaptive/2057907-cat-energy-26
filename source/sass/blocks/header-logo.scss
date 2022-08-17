@@ -1,7 +1,20 @@
 @use "../abstract/" as *;
 
 .header-logo {
+  width: 34px;
+  height: 38px;
+
+  @include media(md) {
+    width: 174px;
+    height: 52px;
+  }
+
   &--text {
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+    padding-right: 10px;
+
     @include media(md) {
       display: none;
     }

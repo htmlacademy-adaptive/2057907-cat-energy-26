@@ -37,50 +37,46 @@
 
 
   &--lose-weight-icon::before {
-    top: 21px;
-    left: 22px;
-    width: 50px;
+    top: 20px;
+    left: 21px;
+    width: 53px;
     height: 53px;
-    background-image: url("../img/decorative/weight-lose-cat-icon.svg");
+    background-image: url("../img/sprite.svg#weight-lose-cat-icon");
 
     @include media(md) {
-      top: 75px;
-      left: 63%;
-      width: 200px;
-      height: 211px;
-      background-size: 200px 211px;
+      top: 76px;
+      left: 62%;
+      width: 212px;
+      height: 212px;
     }
 
     @include media(xl) {
-      top: 41px;
-      left: 52px;
-      width: 100px;
+      top: 39px;
+      left: 49px;
+      width: 106px;
       height: 106px;
-      background-size: 100px 106px;
     }
   }
 
   &--gain-weight-icon::before {
-    top: 24px;
+    top: 14px;
     left: 13px;
     width: 67px;
-    height: 50px;
-    background-image: url("../img/decorative/weight-gain-cat-icon.svg");
+    height: 67px;
+    background-image: url("../img/sprite.svg#weight-gain-cat-icon");
 
     @include media(md) {
-      top: 87px;
+      top: 54px;
       left: 58%;
       width: 268px;
-      height: 200px;
-      background-size: 268px 200px;
+      height: 268px;
     }
 
     @include media(xl) {
-      top: 47px;
+      top: 27px;
       left: 33px;
       width: 134px;
-      height: 100px;
-      background-size: 134px 100px;
+      height: 134px;
     }
   }
 

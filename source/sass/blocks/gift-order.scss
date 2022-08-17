@@ -78,7 +78,7 @@
     top: 58.88px;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("../img/decorative/gift-icon.svg");
+    background-image: url("../img/sprite.svg#gift-icon");
 
     @include media(md) {
       width: 80px;

@@ -125,10 +125,10 @@
 
   &--email {
     width: 20px;
-    height: 14.05px;
-    top: 16.05px;
+    height: 20px;
+    top: 13px;
     right: 15px;
-    mask-image: url("../img/decorative/email-icon.svg");
+    mask-image: url("../img/sprite.svg#email-icon");
 
     @include media(md) {
       width: 18px;
@@ -138,10 +138,10 @@
     }
 
     @include media(xl) {
-      width: 17.74px;
-      height: 13px;
-      top: 19px;
-      right: 19.72px;
+      width: 18.74px;
+      height: 20px;
+      top: 16px;
+      right: 18.72px;
     }
   }
 
@@ -150,7 +150,7 @@
     height: 20px;
     top: 13.04px;
     right: 13px;
-    mask-image: url("../img/decorative/phone-icon.svg");
+    mask-image: url("../img/sprite.svg#phone-icon");
 
     @include media(md) {
       width: 20px;
@@ -593,14 +593,13 @@
     height: 14px;
     top: 8.09px;
     left: 6.25px;
-    background-image: url("../img/decorative/check-mark-icon.svg");
+    background-image: url("../img/sprite.svg#check-mark-icon");
 
     @include media(md) {
       width: 24px;
       height: 18.67px;
       top: 11px;
       left: 8px;
-      background-image: url("../img/decorative/check-mark-icon-xl.svg");
     }
   }
 

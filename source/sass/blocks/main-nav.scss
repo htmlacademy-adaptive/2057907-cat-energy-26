@@ -19,7 +19,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 24px;
-    padding-bottom: 12px;
+    padding-bottom: 16px;
     align-items: center;
   }
 
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 13.39px;
+  padding-bottom: 17.39px;
   z-index: 3;
 
   @include media(md) {
@@ -96,6 +96,7 @@
   width: 24px;
   height: 16px;
   padding: 0;
+  padding-top: 2px;
   border: none;
   background-color: $white;
 
@@ -156,7 +157,7 @@
 
 .main-nav__list--opened {
   display: flex;
-  top: 64px;
+  top: 61px;
   transition: top 0.3s ease-in-out;
 }
 
