@@ -20,12 +20,12 @@
           <picture>
             <source media="(min-width: 1280px)" srcset="img/header/logotype-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/header/logotype-tablet.svg">
-            <img class="header-logo__image-logo" src="img/header/logotype-phone-icon.svg"
+            <img class="header-logo__image-logo" src="img/header/logotype-phone.svg"
               alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
           </picture>
         </a>
-        <a class="main-nav__link header-logo header-logo--text" href="index.html" aria-hidden="true">
-          <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
+        <a class="main-nav__link header-logo header-logo--text" href="index.html">
+          <img class="header-logo__text-logo" src="img/footer/logotype-text.svg" width="101" height="18"
             aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
         </a>
         <button class="main-nav__toggle" type="button">
@@ -39,7 +39,7 @@
             Главная
           </a>
         </li>
-        <li class="site-list__item site-list__item--current">
+        <li class="site-list__item site-list__item--geometry site-list__item--current">
           <a class="site-list__link">
             Каталог продукции
           </a>
@@ -432,19 +432,17 @@
     </section>
   </main>
   <footer class="main-footer">
-    <section class="main-footer__cooperation cooperation">
-      <h2 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h2>
+    <section class="main-footer__cooperation main-footer__cooperation--catalog-page cooperation">
+      <h2 class="cooperation__title">Приглашаем <br> к сотрудничеству дилеров!</h2>
       <address class="cooperation__address">
         <p class="cooperation__address-text">Ул. Большая Конюшенная, д. 19/8</p>
         <p class="cooperation__address-text cooperation__address-text--geometry">Санкт-Петербург</p>
       </address>
     </section>
     <div class="main-footer__location location">
-      <iframe class="location__map"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A95450451a50e191e02d00f00296c7e42715b26db23d44613b3393d2eed27c4d6&amp;source=constructor"
-        width="320" height="362"></iframe>
+      <iframe class="location__map" src="https://yandex.ru/map-widget/v1/-/CCURB8GwoB"></iframe>
     </div>
-    <div class="main-footer__footer-contacts footer-contacts container">
+    <div class="main-footer__footer-contacts footer-contacts footer-contacts--catalog-page container">
       <a class="footer-contacts__logo-link" href="index.html">
         <img src="img/footer/logotype-text.svg" width="128" height="24"
           alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
@@ -468,6 +466,9 @@
       </ul>
       <a class="footer-contacts__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="footer-contacts__copyright-title">HTML Academy</p>
+        <svg class="footer-contacts__copyright-logo" width="24" height="34" viewBox="0 0 27 34">
+          <use role="img" aria-label="Логотип HTML Academy" xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+        </svg>
       </a>
     </div>
   </footer>

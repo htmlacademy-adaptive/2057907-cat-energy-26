@@ -5,17 +5,17 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  padding-top: 27px;
+  padding-top: 23px;
   padding-bottom: 35px;
 
   @include media(md) {
-    padding-top: 53px;
+    padding-top: 42px;
     padding-bottom: 76px;
     font-size: 20px;
   }
 
   @include media(xl) {
-    padding-top: 42px;
+    padding-top: 55px;
     padding-bottom: 86px;
     position: relative;
   }
@@ -25,16 +25,24 @@
   margin-bottom: 25px;
 
   @include media(md) {
-    margin-bottom: 68px;
+    margin-bottom: 65px;
   }
 
   @include media(xl) {
-    margin-bottom: 76px;
+    margin-bottom: 71px;
   }
 }
 
 .catalog__title-wrapper {
-  margin-bottom: 41px;
+  margin-bottom: 37px;
+
+  @include media(md) {
+    margin-bottom: 84px;
+  }
+
+  @include media(xl) {
+    margin-bottom: 84px;
+  }
 }
 
 .catalog__title {
@@ -44,10 +52,11 @@
 
   @include media(md) {
     font-size: 60px;
-    margin-bottom: 82px;
   }
+}
 
+.catalog__gift {
   @include media(xl) {
-    margin-bottom: 84px;
+    margin-top: 2px;
   }
 }

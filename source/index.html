@@ -20,12 +20,12 @@
           <picture>
             <source media="(min-width: 1280px)" srcset="img/header/logotype-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/header/logotype-tablet.svg">
-            <img class="header-logo__image-logo" src="img/header/logotype-phone-icon.svg"
+            <img class="header-logo__image-logo" src="img/header/logotype-phone.svg"
               alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
           </picture>
         </a>
-        <a class="main-nav__link header-logo header-logo--text" href="index.html" aria-hidden="true">
-          <img class="header-logo__text-logo" src="img/header/logotype-phone-text.svg" width="101" height="18"
+        <a class="main-nav__link header-logo header-logo--text" href="index.html">
+          <img class="header-logo__text-logo" src="img/footer/logotype-text.svg" width="101" height="18"
             aria-hidden="true" alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
         </a>
         <button class="main-nav__toggle" type="button">
@@ -59,6 +59,12 @@
         <p class="hero-section__slogan">Занялся собой? Займись котом!</p>
         <div class="hero-section__product-image-wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1280px)"
+              srcset="img/content/promo-product-cat-energy-pro-desktop.webp 1x, img/content/promo-product-cat-energy-pro-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/content/promo-product-cat-energy-pro-tablet.webp 1x, img/content/promo-product-cat-energy-pro-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/content/promo-product-cat-energy-pro-phone.webp 1x, img/content/promo-product-cat-energy-pro-phone@2x.webp 2x">
             <source media="(min-width: 1280px)"
               srcset="img/content/promo-product-cat-energy-pro-desktop.png 1x, img/content/promo-product-cat-energy-pro-desktop@2x.png 2x">
             <source media="(min-width: 768px)"
@@ -76,7 +82,7 @@
     <section class="main-container__advantages advantages container">
       <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="advantages__list">
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--lose-weight-icon">
           <h3 class="advantages__title">Похудение</h3>
           <p class="advantages__slogan">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора
@@ -85,7 +91,7 @@
             Каталог slim
           </a>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--gain-weight-icon">
           <h3 class="advantages__title">Набор массы</h3>
           <p class="advantages__slogan">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
@@ -206,6 +212,9 @@
       </ul>
       <a class="footer-contacts__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="footer-contacts__copyright-title">HTML Academy</p>
+        <svg class="footer-contacts__copyright-logo" width="24" height="34" viewBox="0 0 27 34">
+          <use role="img" aria-label="Логотип HTML Academy" xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+        </svg>
       </a>
     </div>
   </footer>

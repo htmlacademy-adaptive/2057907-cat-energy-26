@@ -18,14 +18,15 @@
     font-size: 18px;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 38px;
-    padding-bottom: 12px;
+    padding-top: 24px;
+    padding-bottom: 16px;
     align-items: center;
   }
 
   @include media(xl) {
-    padding-top: 69px;
-    padding-bottom: 32px;
+    font-size: 20px;
+    padding-top: 53px;
+    padding-bottom: 22px;
   }
 
   &::after {
@@ -95,6 +96,7 @@
   width: 24px;
   height: 16px;
   padding: 0;
+  padding-top: 2px;
   border: none;
   background-color: $white;
 
@@ -155,7 +157,7 @@
 
 .main-nav__list--opened {
   display: flex;
-  top: 64px;
+  top: 61px;
   transition: top 0.3s ease-in-out;
 }
 

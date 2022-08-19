@@ -3,8 +3,8 @@
 .social {
   list-style-type: none;
   padding: 0;
-  padding-top: 20px;
-  padding-bottom: 21px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -15,6 +15,11 @@
     margin-bottom: 0;
     padding: 0;
     justify-self: center;
+    margin-left: -10px;
+  }
+
+  @include media(xl) {
+    align-self: flex-start;
   }
 }
 
@@ -41,13 +46,15 @@
 }
 
 .social__link--vkontakte {
-  mask-image: url("../img/footer/vkontakte.svg");
+  min-height: 26px;
+  margin-top: -3px;
+  mask-image: url("../img/sprite.svg#vkontakte-icon");
 }
 
 .social__link--youtube {
-  mask-image: url("../img/footer/youtube.svg");
+  mask-image: url("../img/sprite.svg#youtube-icon");
 }
 
 .social__link--telegram {
-  mask-image: url("../img/footer/telegram.svg");
+  mask-image: url("../img/sprite.svg#telegram-icon");
 }

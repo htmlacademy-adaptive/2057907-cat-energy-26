@@ -33,11 +33,11 @@
 
   @include media(md) {
     height: 100%;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 29%, rgba(234, 234, 234, 1) 29%, rgba(234, 234, 234, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 151px, rgba(234, 234, 234, 1) 151px, rgba(234, 234, 234, 1) 100%);
   }
 
   @include media (xl) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 171px, rgba(242, 242, 242, 1) 171px, rgba(242, 242, 242, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 137px, rgba(242, 242, 242, 1) 137px, rgba(242, 242, 242, 1) 100%);
   }
 }
 

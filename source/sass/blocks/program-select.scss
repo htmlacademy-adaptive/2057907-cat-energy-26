@@ -5,17 +5,17 @@
   font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
-  padding-top: 27px;
+  padding-top: 23px;
   padding-bottom: 32px;
 
   @include media(md) {
     font-size: 20px;
-    padding-bottom: 72px;
-    padding-top: 63px;
+    padding-bottom: 73px;
+    padding-top: 41px;
   }
 
   @include media(xl) {
-    padding-top: 41.52px;
+    padding-top: 53px;
     padding-bottom: 82px;
   }
 }
@@ -24,7 +24,7 @@
   margin-bottom: 39px;
 
   @include media(md) {
-    padding-left: 71px;
+    padding-left: 69px;
     padding-right: 67px;
     margin-bottom: 66px;
   }
@@ -40,15 +40,15 @@
   line-height: 1.2;
   font-weight: inherit;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 
   @include media(md) {
     font-size: 60px;
-    margin-bottom: 54px;
+    margin-bottom: 50px;
   }
 
   @include media(xl) {
-    margin-bottom: 56px;
+    margin-bottom: 52px;
   }
 }
 
