@@ -590,10 +590,11 @@
     content: "";
     position: absolute;
     width: 18px;
-    height: 14px;
-    top: 8.09px;
+    height: 18px;
+    top: 7.09px;
     left: 6.25px;
     background-image: url("../img/sprite.svg#check-mark-icon");
+    background-repeat: no-repeat;
 
     @include media(md) {
       width: 24px;
@@ -610,7 +611,7 @@
 }
 
 .program-form__button {
-  margin-bottom: 21px;
+  margin-bottom: 23px;
 
   @include media(md) {
     margin: 0;

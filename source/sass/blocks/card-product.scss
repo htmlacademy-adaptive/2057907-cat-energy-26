@@ -16,6 +16,14 @@
   @include media(xl) {
     row-gap: 42px;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card-product__wrapper {

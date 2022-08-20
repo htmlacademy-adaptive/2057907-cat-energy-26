@@ -45,7 +45,7 @@
 
     @include media(md) {
       top: 76px;
-      left: 62%;
+      left: 62.5%;
       width: 212px;
       height: 212px;
     }
@@ -66,17 +66,17 @@
     background-image: url("../img/sprite.svg#weight-gain-cat-icon");
 
     @include media(md) {
-      top: 54px;
-      left: 58%;
-      width: 268px;
-      height: 268px;
+      top: 51px;
+      left: 57.9%;
+      width: 271px;
+      height: 275px;
     }
 
     @include media(xl) {
-      top: 27px;
-      left: 33px;
+      top: 26px;
+      left: 34px;
       width: 134px;
-      height: 134px;
+      height: 137px;
     }
   }
 
@@ -178,20 +178,21 @@
   &::before {
     width: 18px;
     height: 2px;
-    top: 13px;
+    top: 11px;
     right: 14px;
     background-color: $black;
     transition: all 0.3s ease-in-out;
 
     @include media(md) {
       right: 4px;
+      top: 14px;
     }
   }
 
   &::after {
     width: 12px;
     height: 9px;
-    top: 7px;
+    top: 5px;
     right: 0;
     border: 7px solid transparent;
     border-left: 8px solid $black;
@@ -207,10 +208,18 @@
   &:hover::before {
     width: 26px;
     right: 6px;
+
+    @include media(md) {
+      right: -4px;
+    }
   }
 
   &:hover::after {
     right: -8px;
+
+    @include media(md) {
+      right: -16px;
+    }
   }
 
   &:active {

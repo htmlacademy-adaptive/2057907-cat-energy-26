@@ -5,10 +5,10 @@
   line-height: 1.24;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 234, 234, 1) 0%, rgba(234, 234, 234, 1) 100%);
   padding-top: 23px;
-  padding-bottom: 41px;
+  padding-bottom: 42px;
 
   @include media(md) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 619px, rgba(234, 234, 234, 1) 619px, rgba(234, 234, 234, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 620px, rgba(234, 234, 234, 1) 620px, rgba(234, 234, 234, 1) 100%);
     padding-top: 36px;
     padding-bottom: 100px;
   }
@@ -16,7 +16,7 @@
   @include media(xl) {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 186px, rgba(242, 242, 242, 1) 186px, rgba(242, 242, 242, 1) 100%);
     padding-top: 0;
-    padding-bottom: 75px;
+    padding-bottom: 71px;
   }
 }
 
@@ -129,7 +129,7 @@
 
   @include media(md) {
     padding-top: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
     font-size: 30px;
   }
 }
@@ -146,7 +146,8 @@
 
     @include media(md) {
       flex-direction: column;
-      padding-top: 11px;
+      padding-top: 8px;
+      margin-left: -3px;
       grid-column: auto;
       justify-self: end;
       text-align: end;
@@ -161,12 +162,23 @@
       justify-self: flex-start;
       display: flex;
       column-gap: 66px;
+      margin: 0;
     }
   }
 }
 
 .stats__cost {
   margin: 0;
+}
+
+.stats__spending {
+  @include media(md) {
+    margin-bottom: 4px;
+  }
+
+  @include media(xl) {
+    margin: 0;
+  }
 }
 
 .stats__spending,
