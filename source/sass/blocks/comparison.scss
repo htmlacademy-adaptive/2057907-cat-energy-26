@@ -130,17 +130,17 @@
 
 .comparison__arrow-icon {
   position: absolute;
-  top: 46.5%;
+  top: 45.5%;
   left: 50%;
   transform: translateX(-48%);
   width: 24px;
-  height: 18px;
-  mask-image: url("../img/decorative/comparison-arrow.svg");
+  height: 24px;
+  mask-image: url("../img/sprite.svg#comparison-arrow");
   mask-repeat: no-repeat;
   background-color: $granite-gray;
 
   @include media(md) {
-    top: 48.3%;
+    top: 47.6%;
   }
 }
 

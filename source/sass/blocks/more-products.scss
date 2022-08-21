@@ -29,6 +29,7 @@
     @include media(md) {
       content: "";
       position: absolute;
+      z-index: -1;
       top: 76px;
       left: 0;
       right: 0;
