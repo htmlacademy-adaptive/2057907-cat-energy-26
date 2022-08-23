@@ -2,31 +2,31 @@
 
 .location {
   min-height: 362px;
-  background-image: url("../img/content/map-phone.png");
+  background-image: url("../img/content/map-phone.webp, ../img/content/map-phone.png");
   background-repeat: no-repeat;
   background-size: 320px 362px;
   background-position-x: center;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/content/map-phone@2x.png");
+    background-image: url("../img/content/map-phone@2x.webp, ../img/content/map-phone@2x.png");
   }
 
   @include media(md) {
     min-height: 400px;
-    background-image: url("../img/content/map-tablet.png");
+    background-image: url("../img/content/map-tablet.webp, ../img/content/map-tablet.png");
     background-size: 768px 400px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/content/map-tablet@2x.png");
+      background-image: url("../img/content/map-tablet@2x.webp, ../img/content/map-tablet@2x.png");
     }
   }
 
   @include media(xl) {
-    background-image: url("../img/content/map-desktop.png");
+    background-image: url("../img/content/map-desktop.webp, ../img/content/map-desktop.png");
     background-size: 1440px 400px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/content/map-desktop@2x.png");
+      background-image: url("../img/content/map-desktop@2x.webp, ../img/content/map-desktop@2x.png");
     }
   }
 }
