@@ -26,9 +26,11 @@
 .site-list__item {
   padding-top: 22px;
   padding-bottom: 24px;
+  border-top: 1px solid $platinum;
 
   @include media(md) {
     padding: 0;
+    border: none;
   }
 
   &--geometry {

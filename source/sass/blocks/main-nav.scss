@@ -74,21 +74,6 @@
   list-style-type: none;
   position: absolute;
   z-index: 2;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: $platinum;
-    box-shadow: 0 73px 0 0 $platinum, 0 147px 0 0 $platinum;
-
-    @include media(md) {
-      content: none;
-    }
-  }
 }
 
 .main-nav__toggle {
@@ -151,7 +136,7 @@
 }
 
 .main-nav__list--closed {
-  top: -230px;
+  top: -999px;
   transition: top 0.3s ease-in-out;
 }
 
@@ -167,11 +152,11 @@
 }
 
 .main-nav--opened .main-nav__burger::before {
-  height: 1px;
+  height: 1.5px;
   transform: rotate(45deg);
 }
 
 .main-nav--opened .main-nav__burger::after {
-  height: 1px;
+  height: 1.5px;
   transform: rotate(-45deg);
 }

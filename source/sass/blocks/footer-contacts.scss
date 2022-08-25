@@ -45,21 +45,6 @@
       padding-top: 53px;
     }
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 94px;
-    left: 20px;
-    right: 20px;
-    height: 1px;
-    background-color: $light-silver;
-    box-shadow: 0 63px 0 0 $light-silver;
-
-    @include media(md) {
-      content: none;
-    }
-  }
 }
 
 .footer-contacts__logo-link {

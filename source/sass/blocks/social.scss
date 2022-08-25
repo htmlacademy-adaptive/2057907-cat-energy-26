@@ -7,8 +7,12 @@
   padding-bottom: 18px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 132px;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid $light-silver;
+  border-bottom: 1px solid $light-silver;
+  row-gap: 10px;
+  column-gap: 24px;
 
   @include media(md) {
     width: 132px;
@@ -16,15 +20,12 @@
     padding: 0;
     justify-self: center;
     margin-left: -10px;
+    border: none;
   }
 
   @include media(xl) {
     align-self: flex-start;
   }
-}
-
-.social__item:not(:nth-child(3n)) {
-  margin-right: 24px;
 }
 
 .social__link {
