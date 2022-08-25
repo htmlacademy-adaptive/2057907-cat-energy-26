@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="description" content="Функциональное питание для котов: особенности, преимущества, живой пример">
   <title>«Cat Energy» — интернет-магазин функционального питания для котов</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +11,8 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" as="font" href="fonts/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/oswaldmedium.woff2" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -18,9 +21,9 @@
       <div class="main-nav__wrapper">
         <a class="main-nav__link header-logo" href="index.html">
           <picture>
-            <source media="(min-width: 1280px)" srcset="img/header/logotype-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/header/logotype-tablet.svg">
-            <img class="header-logo__image-logo" src="img/header/logotype-phone.svg"
+            <source media="(min-width: 1280px)" srcset="img/header/logotype-desktop.svg" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/header/logotype-tablet.svg" width="174" height="52">
+            <img class="header-logo__image-logo" src="img/header/logotype-phone.svg" width="34" height="38"
               alt="Логотип интернет-магазина функционального питания для котов «Cat Energy»">
           </picture>
         </a>
@@ -33,9 +36,9 @@
           <span class="main-nav__burger"></span>
         </button>
       </div>
-      <ul class="main-nav__list main-nav__list--closed site-list">
+      <ul class="main-nav__list site-list main-nav__list--nojs main-nav__list--closed">
         <li class="site-list__item site-list__item--current site-list__item--current-index-theme">
-          <a class="site-list__link site-list__link--text-color">
+          <a class="site-list__link site-list__link--text-color" href="#">
             Главная
           </a>
         </li>
@@ -60,17 +63,22 @@
         <div class="hero-section__product-image-wrapper">
           <picture>
             <source type="image/webp" media="(min-width: 1280px)"
-              srcset="img/content/promo-product-cat-energy-pro-desktop.webp 1x, img/content/promo-product-cat-energy-pro-desktop@2x.webp 2x">
+              srcset="img/content/promo-product-cat-energy-pro-desktop.webp 1x, img/content/promo-product-cat-energy-pro-desktop@2x.webp 2x"
+              width="552" height="499">
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/content/promo-product-cat-energy-pro-tablet.webp 1x, img/content/promo-product-cat-energy-pro-tablet@2x.webp 2x">
+              srcset="img/content/promo-product-cat-energy-pro-tablet.webp 1x, img/content/promo-product-cat-energy-pro-tablet@2x.webp 2x"
+              width="709" height="609">
             <source type="image/webp"
-              srcset="img/content/promo-product-cat-energy-pro-phone.webp 1x, img/content/promo-product-cat-energy-pro-phone@2x.webp 2x">
+              srcset="img/content/promo-product-cat-energy-pro-phone.webp 1x, img/content/promo-product-cat-energy-pro-phone@2x.webp 2x"
+              width="280" height="270">
             <source media="(min-width: 1280px)"
-              srcset="img/content/promo-product-cat-energy-pro-desktop.png 1x, img/content/promo-product-cat-energy-pro-desktop@2x.png 2x">
+              srcset="img/content/promo-product-cat-energy-pro-desktop.png 1x, img/content/promo-product-cat-energy-pro-desktop@2x.png 2x"
+              width="552" height="499">
             <source media="(min-width: 768px)"
-              srcset="img/content/promo-product-cat-energy-pro-tablet.png 1x, img/content/promo-product-cat-energy-pro-tablet@2x.png 2x">
+              srcset="img/content/promo-product-cat-energy-pro-tablet.png 1x, img/content/promo-product-cat-energy-pro-tablet@2x.png 2x"
+              width="709" height="609">
             <img class="hero-section__product-image" src="img/content/promo-product-cat-energy-pro-phone.png"
-              srcset="img/content/promo-product-cat-energy-pro-phone@2x.png 2x"
+              srcset="img/content/promo-product-cat-energy-pro-phone@2x.png 2x" width="280" height="270"
               alt="Продукт Cat Energy Pro со вкусом курицы, 500 грамм">
           </picture>
         </div>
@@ -155,20 +163,35 @@
         <div class="stats__comparison comparison">
           <figure class="comparison__wrapper">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/content/cat-skinny-tablet-desktop.webp 1x, img/content/cat-skinny-tablet-desktop@2x.webp 2x"
+                width="560" height="512">
+              <source type="image/webp"
+                srcset="img/content/cat-skinny-phone.webp 1x, img/content/cat-skinny-phone@2x.webp 2x" width="280"
+                height="256">
               <source media="(min-width: 768px)"
-                srcset="img/content/cat-skinny-tablet-desktop.png 1x, img/content/cat-skinny-tablet-desktop@2x.png 2x">
+                srcset="img/content/cat-skinny-tablet-desktop.png 1x, img/content/cat-skinny-tablet-desktop@2x.png 2x"
+                width="560" height="512">
               <img class="comparison__skinny" src="img/content/cat-skinny-phone.png"
-                srcset="img/content/cat-skinny-phone@2x.png 2x" alt="Толстый кот">
+                srcset="img/content/cat-skinny-phone@2x.png 2x" width="280" height="256" alt="Толстый кот">
             </picture>
             <div class="comparison__top">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/content/cat-fat-tablet-desktop.webp 1x, img/content/cat-fat-tablet-desktop@2x.webp 2x"
+                  width="560" height="512">
+                <source type="image/webp"
+                  srcset="img/content/cat-fat-phone.webp 1x, img/content/cat-fat-phone@2x.webp 2x" width="280"
+                  height="256">
                 <source media="(min-width: 768px)"
-                  srcset="img/content/cat-fat-tablet-desktop.png 1x, img/content/cat-fat-tablet-desktop@2x.png 2x">
+                  srcset="img/content/cat-fat-tablet-desktop.png 1x, img/content/cat-fat-tablet-desktop@2x.png 2x"
+                  width="560" height="512">
                 <img class="comparison__top-img comparison__fat" src="img/content/cat-fat-phone.png"
-                  srcset="img/content/cat-fat-phone@2x.png 2x" alt="Худой кот">
+                  srcset="img/content/cat-fat-phone@2x.png 2x" width="280" height="256" alt="Худой кот">
               </picture>
             </div>
             <div class="comparison__range-wrapper">
+              <label class="visually-hidden" for="range">Слайдер "до и после"</label>
               <input class="comparison__input" type="range" min="0" max="100" value="50" id="range">
               <span class="comparison__arrow-icon"></span>
             </div>
@@ -186,7 +209,9 @@
       </address>
     </section>
     <div class="main-footer__location location">
-      <iframe class="location__map" src="https://yandex.ru/map-widget/v1/-/CCURB8GwoB"></iframe>
+      <iframe class="location__map" title="Наше местоположение на карте"
+        src="https://yandex.ru/map-widget/v1/-/CCURB8GwoB">
+      </iframe>
     </div>
     <div class="main-footer__footer-contacts footer-contacts container">
       <a class="footer-contacts__logo-link" href="index.html">
@@ -218,8 +243,8 @@
       </a>
     </div>
   </footer>
-  <script src="js/header.js"></script>
-  <script src="js/comparison-cat.js"></script>
+  <script async src="js/header.js"></script>
+  <script async src="js/comparison-cat.js"></script>
 </body>
 
 </html>

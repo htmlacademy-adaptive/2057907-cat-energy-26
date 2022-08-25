@@ -45,26 +45,11 @@
       padding-top: 53px;
     }
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 94px;
-    left: 20px;
-    right: 20px;
-    height: 1px;
-    background-color: $light-silver;
-    box-shadow: 0 63px 0 0 $light-silver;
-
-    @include media(md) {
-      content: none;
-    }
-  }
 }
 
 .footer-contacts__logo-link {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 
   &:hover {
     opacity: 0.8;
@@ -81,7 +66,7 @@
 
 .footer-contacts__social {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 22px;
 }
 
 .footer-contacts__copyright-link {

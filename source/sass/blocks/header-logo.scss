@@ -9,6 +9,11 @@
     height: 52px;
   }
 
+  @include media(xl) {
+    width: 202px;
+    height: 59px;
+  }
+
   &--text {
     width: fit-content;
     height: fit-content;

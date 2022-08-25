@@ -30,7 +30,7 @@
   @include media(xl) {
     padding: 0;
     padding-bottom: 54px;
-    padding-top: 13px;
+    padding-top: 5px;
   }
 
   &::before {
@@ -133,6 +133,7 @@
 
 .hero-section__product-image-wrapper {
   width: 100%;
+  height: auto;
 
   @include media(md) {
     order: 4;
@@ -149,4 +150,8 @@
     margin-top: -32.2%;
     margin-left: calc(31% + 14px);
   }
+}
+
+.hero-section__product-image {
+  aspect-ratio: attr(width) / attr(height);
 }
