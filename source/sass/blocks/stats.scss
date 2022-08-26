@@ -8,25 +8,22 @@
   padding-bottom: 42px;
 
   @include media(md) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 620px, rgba(234, 234, 234, 1) 620px, rgba(234, 234, 234, 1) 100%);
+    background-image: none;
     padding-top: 36px;
-    padding-bottom: 100px;
+    padding-bottom: 0;
   }
 
   @include media(xl) {
     background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 186px, rgba(242, 242, 242, 1) 186px, rgba(242, 242, 242, 1) 100%);
     padding-top: 0;
     padding-bottom: 71px;
+    position: relative;
   }
 }
 
 .stats__wrapper {
   display: flex;
   flex-direction: column;
-
-  @include media(xl) {
-    position: relative;
-  }
 }
 
 .stats__title {
@@ -103,6 +100,7 @@
   grid-template-columns: repeat(2, 44.29%);
   text-align: center;
   justify-content: space-between;
+  row-gap: 10px;
 
   @include media(md) {
     grid-template-columns: 23% 23% 1fr;
@@ -138,7 +136,7 @@
   text-transform: uppercase;
 
   &--geometry {
-    padding-top: 17px;
+    padding-top: 7px;
     grid-column: 1 / -1;
     display: flex;
     margin: 0 auto;
@@ -148,7 +146,7 @@
       flex-direction: column;
       padding-top: 8px;
       margin-left: -3px;
-      grid-column: auto;
+      grid-column: 3 / -1;
       justify-self: end;
       text-align: end;
       width: 100%;
@@ -191,7 +189,7 @@
 .stats__comparison {
   @include media(xl) {
     position: absolute;
-    top: 49px;
-    right: 15px;
+    top: 52px;
+    right: 95px;
   }
 }
