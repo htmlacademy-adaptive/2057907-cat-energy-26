@@ -4,8 +4,15 @@
 .comparison {
   width: 100%;
 
+  @include media(md) {
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 151px, rgba(234, 234, 234, 1) 151px, rgba(234, 234, 234, 1) 100%);
+    padding-bottom: 100px;
+  }
+
   @include media(xl) {
+    padding-bottom: 0;
     width: 591px;
+    background-image: none;
   }
 }
 
@@ -38,7 +45,7 @@
   }
 
   @include media (xl) {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 137px, rgba(242, 242, 242, 1) 137px, rgba(242, 242, 242, 1) 100%);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 134px, rgba(242, 242, 242, 1) 134px, rgba(242, 242, 242, 1) 100%);
   }
 }
 
@@ -46,6 +53,11 @@
 .comparison__fat {
   display: block;
   margin: 0 auto;
+
+  @include media(md) {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .comparison__button {
@@ -68,10 +80,10 @@
   &::after {
     content: "";
     position: absolute;
-    height: 110px;
+    height: 109px;
     width: 4px;
     background-color: $granite-gray;
-    left: 50%;
+    left: var(--comparison);
     transform: translateX(-50%);
     border-radius: 2px;
 
@@ -113,10 +125,10 @@
 .comparison__input {
   appearance: none;
   background-color: transparent;
-  width: 100%;
+  width: calc(100% + 40px);
   height: 100%;
   top: 50%;
-  margin: 0;
+  margin: 0 -20px;
 }
 
 .comparison__input[type="range"]::-webkit-slider-thumb {
@@ -131,14 +143,15 @@
 
 .comparison__arrow-icon {
   position: absolute;
-  top: 45.5%;
-  left: 50%;
+  top: 45.3%;
+  left: var(--comparison);
   transform: translateX(-48%);
   width: 24px;
   height: 24px;
   mask-image: url("../img/sprite.svg#comparison-arrow");
   mask-repeat: no-repeat;
   background-color: $granite-gray;
+  pointer-events: none;
 
   @include media(md) {
     top: 47.6%;
@@ -147,10 +160,10 @@
 
 .comparison__input[type="range"]::-moz-range-thumb {
   appearance: none;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border: 2px solid $granite-gray;
-  border-radius: 20px;
+  border-radius: 50%;
   background-color: $white;
   cursor: ew-resize;
 }

@@ -153,5 +153,13 @@
 }
 
 .hero-section__product-image {
-  aspect-ratio: attr(width) / attr(height);
+  @include media(md) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @include media(xl) {
+    width: 552px;
+    height: 499px;
+  }
 }

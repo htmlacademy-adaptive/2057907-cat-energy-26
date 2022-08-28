@@ -134,10 +134,23 @@
   }
 }
 
-.card-product__image {
+.card-product__image-wrapper {
   margin: 0;
   align-self: center;
   justify-self: center;
+
+  @include media(xl) {
+    width: 172px;
+    height: 196px;
+  }
+}
+
+.card-product__image-wrapper,
+.card-product__image {
+  @include media(md) {
+    width: 168px;
+    height: 200px;
+  }
 
   @include media(xl) {
     width: 172px;

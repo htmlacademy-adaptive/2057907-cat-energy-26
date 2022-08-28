@@ -25,3 +25,15 @@
     }
   }
 }
+
+.header-logo__image-logo {
+  @include media(md) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @include media(xl) {
+    width: 202px;
+    height: 59px;
+  }
+}
