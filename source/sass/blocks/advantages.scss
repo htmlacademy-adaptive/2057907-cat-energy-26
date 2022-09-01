@@ -20,6 +20,8 @@
   @include media(xl) {
     flex-direction: row;
     column-gap: 80px;
+    row-gap: 80px;
+    flex-wrap: wrap;
   }
 }
 
@@ -85,7 +87,7 @@
   }
 
   @include media(xl) {
-    width: 50%;
+    width: 570px;
     padding: 36px 51px 59px 52px;
   }
 }
