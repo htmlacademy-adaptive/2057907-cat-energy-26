@@ -604,6 +604,11 @@
     }
   }
 
+  &:focus + .program-form__control-mark {
+    outline: 2px solid $green;
+    outline-offset: 2px;
+  }
+
   &:disabled + .program-form__control-mark,
   &:disabled ~ .program-form__control-label {
     opacity: 0.3;
@@ -616,12 +621,12 @@
   @include media(md) {
     margin: 0;
     width: 45%;
-    padding: 13px 0;
+    padding: 13px;
   }
 
   @include media(xl) {
     width: 568px;
-    padding: 14px 0;
+    padding: 14px;
   }
 }
 

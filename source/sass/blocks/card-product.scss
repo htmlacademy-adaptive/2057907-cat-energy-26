@@ -99,6 +99,7 @@
 .card-product__specification-item {
   display: flex;
   justify-content: space-between;
+  column-gap: 10px;
 
   @include media(md) {
     padding-bottom: 5px;
@@ -175,7 +176,7 @@
 }
 
 .card-product__button {
-  padding: 10px 0;
+  padding: 10px;
   min-height: 40px;
 
   @include media(md) {
