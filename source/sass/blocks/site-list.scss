@@ -13,9 +13,11 @@
     flex-direction: row;
     align-items: center;
     width: 62%;
-    justify-content: space-between;
     background-color: transparent;
     padding-top: 8px;
+    column-gap: 34px;
+    row-gap: 15px;
+    flex-wrap: wrap;
   }
 
   @include media(xl) {

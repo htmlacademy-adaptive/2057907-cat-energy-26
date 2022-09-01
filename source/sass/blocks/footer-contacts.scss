@@ -85,8 +85,8 @@
   }
 
   @include media(md) {
-    width: 163px;
-    justify-self: flex-end;
+    justify-content: flex-end;
+    column-gap: 25px;
   }
 }
 
@@ -95,9 +95,15 @@
   font-size: 16px;
   line-height: 18px;
   color: $dark-gray;
+  width: fit-content;
+  max-width: 78%;
 }
 
 .footer-contacts__copyright-logo {
   margin-left: auto;
   color: $granite-gray;
+
+  @include media(md) {
+    margin-left: 0;
+  }
 }

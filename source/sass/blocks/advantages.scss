@@ -164,9 +164,15 @@
   line-height: 1.5;
   padding-right: 48px;
   position: relative;
+  display: inline-block;
 
   @include media(md) {
     font-size: 20px;
+    max-width: 57.85%;
+  }
+
+  @include media(xl) {
+    max-width: 100%;
   }
 
   &::before,
